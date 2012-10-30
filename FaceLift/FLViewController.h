@@ -10,7 +10,7 @@
 
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@interface FLViewController : UIViewController < UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface FLViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (strong, nonatomic) UIImage *currentImage;
 @property (strong, nonatomic) NSDictionary *currentImageInformation;

@@ -20,6 +20,9 @@
 		D2759AFE160BB5BA0060C728 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2759AFC160BB5BA0060C728 /* MainStoryboard_iPhone.storyboard */; };
 		D2759B01160BB5BA0060C728 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2759AFF160BB5BA0060C728 /* MainStoryboard_iPad.storyboard */; };
 		D2759B04160BB5BA0060C728 /* FLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2759B03160BB5BA0060C728 /* FLViewController.m */; };
+		D2DC93451640613500B3EB92 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DC93441640613500B3EB92 /* QuartzCore.framework */; };
+		D2DC9349164061B100B3EB92 /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DC9348164061B100B3EB92 /* SAViewManipulator.m */; };
+		D2DC934D164061F700B3EB92 /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DC934C164061F700B3EB92 /* OBGradientView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,11 @@
 		D2759B00160BB5BA0060C728 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		D2759B02160BB5BA0060C728 /* FLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLViewController.h; sourceTree = "<group>"; };
 		D2759B03160BB5BA0060C728 /* FLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLViewController.m; sourceTree = "<group>"; };
+		D2DC93441640613500B3EB92 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D2DC9347164061B100B3EB92 /* SAViewManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAViewManipulator.h; sourceTree = "<group>"; };
+		D2DC9348164061B100B3EB92 /* SAViewManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAViewManipulator.m; sourceTree = "<group>"; };
+		D2DC934B164061F700B3EB92 /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
+		D2DC934C164061F700B3EB92 /* OBGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBGradientView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2DC93451640613500B3EB92 /* QuartzCore.framework in Frameworks */,
 				D2024C4616123A24000BAE1A /* MobileCoreServices.framework in Frameworks */,
 				D2759AE5160BB5B90060C728 /* UIKit.framework in Frameworks */,
 				D2759AE7160BB5B90060C728 /* Foundation.framework in Frameworks */,
@@ -58,6 +67,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2024C4D161240EB000BAE1A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D2759AFC160BB5BA0060C728 /* MainStoryboard_iPhone.storyboard */,
+				D2759AFF160BB5BA0060C728 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D2024C4E161240F7000BAE1A /* Primary View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D2759B02160BB5BA0060C728 /* FLViewController.h */,
+				D2759B03160BB5BA0060C728 /* FLViewController.m */,
+			);
+			name = "Primary View Controller";
+			sourceTree = "<group>";
+		};
+		D2024C4F16124108000BAE1A /* App Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D2759AF3160BB5B90060C728 /* FLAppDelegate.h */,
+				D2759AF4160BB5B90060C728 /* FLAppDelegate.m */,
+			);
+			name = "App Delegates";
+			sourceTree = "<group>";
+		};
 		D2759AD5160BB5B90060C728 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +114,7 @@
 		D2759AE3160BB5B90060C728 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2DC93441640613500B3EB92 /* QuartzCore.framework */,
 				D2024C4516123A24000BAE1A /* MobileCoreServices.framework */,
 				D2759AE4160BB5B90060C728 /* UIKit.framework */,
 				D2759AE6160BB5B90060C728 /* Foundation.framework */,
@@ -89,12 +126,10 @@
 		D2759AEA160BB5B90060C728 /* FaceLift */ = {
 			isa = PBXGroup;
 			children = (
-				D2759AF3160BB5B90060C728 /* FLAppDelegate.h */,
-				D2759AF4160BB5B90060C728 /* FLAppDelegate.m */,
-				D2759AFC160BB5BA0060C728 /* MainStoryboard_iPhone.storyboard */,
-				D2759AFF160BB5BA0060C728 /* MainStoryboard_iPad.storyboard */,
-				D2759B02160BB5BA0060C728 /* FLViewController.h */,
-				D2759B03160BB5BA0060C728 /* FLViewController.m */,
+				D2DC934A164061B600B3EB92 /* Utilities */,
+				D2024C4F16124108000BAE1A /* App Delegates */,
+				D2024C4D161240EB000BAE1A /* Storyboards */,
+				D2024C4E161240F7000BAE1A /* Primary View Controller */,
 				D2759AEB160BB5B90060C728 /* Supporting Files */,
 			);
 			path = FaceLift;
@@ -112,6 +147,17 @@
 				D2759AFA160BB5BA0060C728 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2DC934A164061B600B3EB92 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D2DC934B164061F700B3EB92 /* OBGradientView.h */,
+				D2DC934C164061F700B3EB92 /* OBGradientView.m */,
+				D2DC9347164061B100B3EB92 /* SAViewManipulator.h */,
+				D2DC9348164061B100B3EB92 /* SAViewManipulator.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +231,8 @@
 				D2759AF1160BB5B90060C728 /* main.m in Sources */,
 				D2759AF5160BB5B90060C728 /* FLAppDelegate.m in Sources */,
 				D2759B04160BB5BA0060C728 /* FLViewController.m in Sources */,
+				D2DC9349164061B100B3EB92 /* SAViewManipulator.m in Sources */,
+				D2DC934D164061F700B3EB92 /* OBGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +291,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "ThirdParty/ocropus/ocr-utils ThirdParty/iulib-includes ThirdParty/iulib ThirdParty/OpenCV/modules/contrib/include ThirdParty/OpenCV/modules/ml/include ThirdParty/OpenCV/modules/highgui/include ThirdParty/OpenCV/modules/calib3d/include ThirdParty/OpenCV/modules/objdetect/include ThirdParty/OpenCV/modules/features2d/include ThirdParty/OpenCV/modules/video/include ThirdParty/OpenCV/modules/imgproc/include ThirdParty/OpenCV/modules/flann/include ThirdParty/OpenCV/modules/core/include\nThirdParty/OpenCV/modules/core/include\nThirdParty/OpenCV/modules/core/include ThirdParty/OpenCV/include";
 			};
 			name = Debug;
 		};
@@ -265,6 +314,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "ThirdParty/ocropus/ocr-utils ThirdParty/iulib-includes ThirdParty/iulib ThirdParty/OpenCV/modules/contrib/include ThirdParty/OpenCV/modules/ml/include ThirdParty/OpenCV/modules/highgui/include ThirdParty/OpenCV/modules/calib3d/include ThirdParty/OpenCV/modules/objdetect/include ThirdParty/OpenCV/modules/features2d/include ThirdParty/OpenCV/modules/video/include ThirdParty/OpenCV/modules/imgproc/include ThirdParty/OpenCV/modules/flann/include ThirdParty/OpenCV/modules/core/include\nThirdParty/OpenCV/modules/core/include\nThirdParty/OpenCV/modules/core/include ThirdParty/OpenCV/include";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -277,6 +327,7 @@
 				INFOPLIST_FILE = "FaceLift/FaceLift-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "ThirdParty/OpenCV/modules/core/include ThirdParty/OpenCV/include ThirdParty/ocropus/ocr-utils ThirdParty/iulib-includes ThirdParty/iulib ThirdParty/OpenCV/modules/contrib/include ThirdParty/OpenCV/modules/ml/include ThirdParty/OpenCV/modules/highgui/include ThirdParty/OpenCV/modules/calib3d/include ThirdParty/OpenCV/modules/objdetect/include ThirdParty/OpenCV/modules/features2d/include ThirdParty/OpenCV/modules/video/include ThirdParty/OpenCV/modules/imgproc/include ThirdParty/OpenCV/modules/flann/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -289,6 +340,7 @@
 				INFOPLIST_FILE = "FaceLift/FaceLift-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "ThirdParty/OpenCV/modules/core/include ThirdParty/OpenCV/include ThirdParty/ocropus/ocr-utils ThirdParty/iulib-includes ThirdParty/iulib ThirdParty/OpenCV/modules/contrib/include ThirdParty/OpenCV/modules/ml/include ThirdParty/OpenCV/modules/highgui/include ThirdParty/OpenCV/modules/calib3d/include ThirdParty/OpenCV/modules/objdetect/include ThirdParty/OpenCV/modules/features2d/include ThirdParty/OpenCV/modules/video/include ThirdParty/OpenCV/modules/imgproc/include ThirdParty/OpenCV/modules/flann/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

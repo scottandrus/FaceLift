@@ -7,6 +7,7 @@
 //
 
 #import "FLViewController.h"
+#import "SAViewManipulator.h"
 
 @interface FLViewController ()
 
@@ -36,6 +37,10 @@
 
 #pragma mark - Utilities
 
+- (void)customizeInterface {
+    [SAViewManipulator addBorderToView:self.currentImagePreviewImageView withWidth:1 color:[UIColor darkTextColor] andRadius:0];
+}
+
 - (void)showNoCameraAlert {
     // Show an alert that tells the user their device is not compatible.
     UIAlertView *alert = [[UIAlertView alloc]
@@ -47,7 +52,7 @@
     [alert show];
 }
 
-- (void)startCameraControllerFromViewController:(UIViewController *)viewController withDelegate:(id<UINavigationControllerDelegate, UIImagePickerControllerDelegate>)delegate sourceType:(UIImagePickerControllerSourceType)sourceType andMediaTypes:(NSArray *)mediaTypes {
+- (void)startCameraControllerFromViewController:(UIViewController *)viewController withDelegate:(id<UINavigationControllerDelegate,  UIImagePickerControllerDelegate>)delegate sourceType:(UIImagePickerControllerSourceType)sourceType andMediaTypes:(NSArray *)mediaTypes {
     // If the current device supports the camera
     if ([UIImagePickerController isSourceTypeAvailable:sourceType]) {
         // Allocate and initialize image picker controller
