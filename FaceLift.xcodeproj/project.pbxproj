@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DF81B9B1640683900B0883F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF81B9A1640683900B0883F /* FacebookSDK.framework */; };
-		3DF81B9E1640687300B0883F /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DF81B9D1640687300B0883F /* FacebookSDKResources.bundle */; };
 		3DF81BA0164068A000B0883F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF81B9F164068A000B0883F /* AdSupport.framework */; };
 		3DF81BA2164068A800B0883F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF81BA1164068A800B0883F /* Accounts.framework */; };
 		3DF81BA4164068AD00B0883F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF81BA3164068AD00B0883F /* Social.framework */; };
+		3DF81BA616406EC100B0883F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF81BA516406EC100B0883F /* FacebookSDK.framework */; };
+		3DF81BAA16406F2700B0883F /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DF81BA916406F2700B0883F /* FacebookSDKResources.bundle */; };
 		D2024C4616123A24000BAE1A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2024C4516123A24000BAE1A /* MobileCoreServices.framework */; };
 		D2759AE5160BB5B90060C728 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2759AE4160BB5B90060C728 /* UIKit.framework */; };
 		D2759AE7160BB5B90060C728 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2759AE6160BB5B90060C728 /* Foundation.framework */; };
@@ -28,11 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3DF81B9A1640683900B0883F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Development/Frameworks/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		3DF81B9D1640687300B0883F /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../Development/Frameworks/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		3DF81B9F164068A000B0883F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3DF81BA1164068A800B0883F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		3DF81BA3164068AD00B0883F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3DF81BA516406EC100B0883F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		3DF81BA916406F2700B0883F /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		D2024C4516123A24000BAE1A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D2759AE0160BB5B90060C728 /* FaceLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2759AE4160BB5B90060C728 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 				D2759AE5160BB5B90060C728 /* UIKit.framework in Frameworks */,
 				D2759AE7160BB5B90060C728 /* Foundation.framework in Frameworks */,
 				D2759AE9160BB5B90060C728 /* CoreGraphics.framework in Frameworks */,
-				3DF81B9B1640683900B0883F /* FacebookSDK.framework in Frameworks */,
+				3DF81BA616406EC100B0883F /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,11 +92,11 @@
 		D2759AE3160BB5B90060C728 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DF81BA916406F2700B0883F /* FacebookSDKResources.bundle */,
+				3DF81BA516406EC100B0883F /* FacebookSDK.framework */,
 				3DF81BA3164068AD00B0883F /* Social.framework */,
 				3DF81BA1164068A800B0883F /* Accounts.framework */,
 				3DF81B9F164068A000B0883F /* AdSupport.framework */,
-				3DF81B9D1640687300B0883F /* FacebookSDKResources.bundle */,
-				3DF81B9A1640683900B0883F /* FacebookSDK.framework */,
 				D2024C4516123A24000BAE1A /* MobileCoreServices.framework */,
 				D2759AE4160BB5B90060C728 /* UIKit.framework */,
 				D2759AE6160BB5B90060C728 /* Foundation.framework */,
@@ -191,7 +191,7 @@
 				D2759AFB160BB5BA0060C728 /* Default-568h@2x.png in Resources */,
 				D2759AFE160BB5BA0060C728 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D2759B01160BB5BA0060C728 /* MainStoryboard_iPad.storyboard in Resources */,
-				3DF81B9E1640687300B0883F /* FacebookSDKResources.bundle in Resources */,
+				3DF81BAA16406F2700B0883F /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +295,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Development/Frameworks/FacebookSDK\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceLift/FaceLift-Prefix.pch";
@@ -312,6 +313,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Development/Frameworks/FacebookSDK\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceLift/FaceLift-Prefix.pch";
