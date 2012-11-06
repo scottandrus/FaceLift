@@ -135,6 +135,12 @@
 		D26BCC6A16430C3B007030DD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26BCC6916430C3B007030DD /* QuartzCore.framework */; };
 		D26BCC6D16430C9B007030DD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26BCC6C16430C9B007030DD /* MobileCoreServices.framework */; };
 		D26BCC7016430D82007030DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D26BCC6F16430D82007030DD /* Default-568h@2x.png */; };
+		D2BA63361649B6FE00ADC685 /* Camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63351649B6FE00ADC685 /* Camera@2x.png */; };
+		D2BA63391649B93200ADC685 /* wedheadshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63381649B93200ADC685 /* wedheadshot.jpg */; };
+		D2BA633B1649B97200ADC685 /* Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2BA633A1649B97200ADC685 /* Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg */; };
+		D2BA633D1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2BA633C1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg */; };
+		D2BA63411649BAC800ADC685 /* blank_poloroid_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */; };
+		D2BA63431649BC0A00ADC685 /* alcohol_rehab_success.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63421649BC0A00ADC685 /* alcohol_rehab_success.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,6 +289,12 @@
 		D26BCC6916430C3B007030DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D26BCC6C16430C9B007030DD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D26BCC6F16430D82007030DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D2BA63351649B6FE00ADC685 /* Camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera@2x.png"; sourceTree = "<group>"; };
+		D2BA63381649B93200ADC685 /* wedheadshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wedheadshot.jpg; sourceTree = "<group>"; };
+		D2BA633A1649B97200ADC685 /* Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg"; sourceTree = "<group>"; };
+		D2BA633C1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 321068_223279641057506_1481430_n.jpg; sourceTree = "<group>"; };
+		D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_poloroid_frame.png; sourceTree = "<group>"; };
+		D2BA63421649BC0A00ADC685 /* alcohol_rehab_success.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alcohol_rehab_success.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,8 +365,7 @@
 				D26BCC6E16430D66007030DD /* Utilities */,
 				D26BCC5116430AF4007030DD /* App Delegate */,
 				D26BCC5316430AFC007030DD /* View Controller */,
-				D26BCC5D16430B20007030DD /* MainStoryboard_iPad.storyboard */,
-				D26BCC5F16430B20007030DD /* MainStoryboard_iPhone.storyboard */,
+				D2BA63331649B29D00ADC685 /* Storyboards */,
 				9B0C16AC1523D18A00B14CF7 /* FaceRecognition */,
 				9B0C16C71523D46200B14CF7 /* Images */,
 				9B0C156A15234B7A00B14CF7 /* Supporting Files */,
@@ -579,6 +590,8 @@
 		9B0C16C71523D46200B14CF7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D2BA63371649B91E00ADC685 /* People */,
+				D2BA63351649B6FE00ADC685 /* Camera@2x.png */,
 				9B0C16C81523D67D00B14CF7 /* 1_1.jpg */,
 				9B0C16C91523D67D00B14CF7 /* 1_2.jpg */,
 				9B0C16CA1523D67D00B14CF7 /* 1_3.jpg */,
@@ -622,6 +635,27 @@
 				D26BCC5916430B17007030DD /* SAViewManipulator.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		D2BA63331649B29D00ADC685 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D26BCC5D16430B20007030DD /* MainStoryboard_iPad.storyboard */,
+				D26BCC5F16430B20007030DD /* MainStoryboard_iPhone.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D2BA63371649B91E00ADC685 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				D2BA63421649BC0A00ADC685 /* alcohol_rehab_success.jpg */,
+				D2BA633C1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg */,
+				D2BA63381649B93200ADC685 /* wedheadshot.jpg */,
+				D2BA633A1649B97200ADC685 /* Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg */,
+				D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */,
+			);
+			name = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -747,6 +781,12 @@
 				D26BCC6116430B20007030DD /* MainStoryboard_iPad.storyboard in Resources */,
 				D26BCC6216430B20007030DD /* MainStoryboard_iPhone.storyboard in Resources */,
 				D26BCC7016430D82007030DD /* Default-568h@2x.png in Resources */,
+				D2BA63361649B6FE00ADC685 /* Camera@2x.png in Resources */,
+				D2BA63391649B93200ADC685 /* wedheadshot.jpg in Resources */,
+				D2BA633B1649B97200ADC685 /* Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg in Resources */,
+				D2BA633D1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg in Resources */,
+				D2BA63411649BAC800ADC685 /* blank_poloroid_frame.png in Resources */,
+				D2BA63431649BC0A00ADC685 /* alcohol_rehab_success.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
