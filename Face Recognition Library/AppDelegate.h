@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const SessionStateChangedNotification;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (void)openSessionWithLoginUI:(BOOL)allowLoginUI;
 
 @end

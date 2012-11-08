@@ -7,9 +7,12 @@
 //
 
 #import "FLViewController.h"
+#import "FLLoginViewController.h"
 #import "SAViewManipulator.h"
 #import "opencv2/opencv.hpp"
 #import "facerec.hpp"
+#import "AppDelegate.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface FLViewController ()
 
@@ -23,6 +26,38 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionStateChanged:) name:SessionStateChangedNotification object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (FBSession.activeSession.isOpen)
+    {
+        [self populateUserDetails];
+    }
+    else if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded)
+    {
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        [appDelegate openSessionWithLoginUI:NO];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (FBSession.activeSession.isOpen
+        || FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded
+        || FBSession.activeSession.state == FBSessionStateCreatedOpening)
+    {
+        // Nothing to do.
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,6 +65,29 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)populateUserDetails
+{
+    if (FBSession.activeSession.isOpen)
+    {
+        NSLog(@"Session is open!");
+    }
+}
+
+- (void)sessionStateChanged:(NSNotification*)notification
+{
+    if (FBSession.activeSession.isOpen)
+    {
+        [self populateUserDetails];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+    }
+}
+
+#pragma mark - Facebook
+
 
 #pragma mark - IBActions
 

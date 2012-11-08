@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1525A2164C509C00D7AA33 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A1164C509C00D7AA33 /* FacebookSDK.framework */; };
+		3D1525A5164C50F200D7AA33 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A4164C50F200D7AA33 /* Accounts.framework */; };
+		3D1525A7164C50F800D7AA33 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A6164C50F800D7AA33 /* AdSupport.framework */; };
+		3D1525A9164C50FE00D7AA33 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A8164C50FE00D7AA33 /* Social.framework */; };
+		3D1525AC164C536300D7AA33 /* FLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1525AB164C536300D7AA33 /* FLLoginViewController.m */; };
 		9B0C156415234B7A00B14CF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0C156315234B7A00B14CF7 /* UIKit.framework */; };
 		9B0C156615234B7A00B14CF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0C156515234B7A00B14CF7 /* Foundation.framework */; };
 		9B0C156815234B7A00B14CF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0C156715234B7A00B14CF7 /* CoreGraphics.framework */; };
@@ -154,6 +159,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1525A1164C509C00D7AA33 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		3D1525A4164C50F200D7AA33 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		3D1525A6164C50F800D7AA33 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		3D1525A8164C50FE00D7AA33 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3D1525AA164C536300D7AA33 /* FLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLLoginViewController.h; sourceTree = "<group>"; };
+		3D1525AB164C536300D7AA33 /* FLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLLoginViewController.m; sourceTree = "<group>"; };
 		9B0C155F15234B7A00B14CF7 /* Face Recognition Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Recognition Library.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0C156315234B7A00B14CF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9B0C156515234B7A00B14CF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -302,6 +313,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1525A9164C50FE00D7AA33 /* Social.framework in Frameworks */,
+				3D1525A7164C50F800D7AA33 /* AdSupport.framework in Frameworks */,
+				3D1525A5164C50F200D7AA33 /* Accounts.framework in Frameworks */,
 				D26BCC6D16430C9B007030DD /* MobileCoreServices.framework in Frameworks */,
 				D26BCC6A16430C3B007030DD /* QuartzCore.framework in Frameworks */,
 				9B0C156815234B7A00B14CF7 /* CoreGraphics.framework in Frameworks */,
@@ -310,6 +324,7 @@
 				9B0C156615234B7A00B14CF7 /* Foundation.framework in Frameworks */,
 				9B0C156415234B7A00B14CF7 /* UIKit.framework in Frameworks */,
 				9B0C16961523576900B14CF7 /* libz.dylib in Frameworks */,
+				3D1525A2164C509C00D7AA33 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +363,10 @@
 		9B0C156215234B7A00B14CF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D1525A8164C50FE00D7AA33 /* Social.framework */,
+				3D1525A6164C50F800D7AA33 /* AdSupport.framework */,
+				3D1525A4164C50F200D7AA33 /* Accounts.framework */,
+				3D1525A1164C509C00D7AA33 /* FacebookSDK.framework */,
 				9B0C1691152355AA00B14CF7 /* libz.dylib */,
 				D26BCC6C16430C9B007030DD /* MobileCoreServices.framework */,
 				D26BCC6916430C3B007030DD /* QuartzCore.framework */,
@@ -622,6 +641,8 @@
 			children = (
 				D26BCC5416430B17007030DD /* FLViewController.h */,
 				D26BCC5516430B17007030DD /* FLViewController.mm */,
+				3D1525AA164C536300D7AA33 /* FLLoginViewController.h */,
+				3D1525AB164C536300D7AA33 /* FLLoginViewController.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -808,6 +829,7 @@
 				D26BCC5A16430B17007030DD /* FLViewController.mm in Sources */,
 				D26BCC5B16430B17007030DD /* OBGradientView.m in Sources */,
 				D26BCC5C16430B17007030DD /* SAViewManipulator.m in Sources */,
+				3D1525AC164C536300D7AA33 /* FLLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,6 +994,10 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_WARN_CXX0X_EXTENSIONS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Face Recognition Library/Face Recognition Library-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -983,6 +1009,7 @@
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-Objc",
+					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -998,6 +1025,10 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_WARN_CXX0X_EXTENSIONS = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Face Recognition Library/Face Recognition Library-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
@@ -1008,6 +1039,7 @@
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-Objc",
+					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SEPARATE_STRIP = YES;
