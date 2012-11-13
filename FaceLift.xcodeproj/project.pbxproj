@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3D1525A2164C509C00D7AA33 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A1164C509C00D7AA33 /* FacebookSDK.framework */; };
-		3D1525A5164C50F200D7AA33 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A4164C50F200D7AA33 /* Accounts.framework */; };
-		3D1525A7164C50F800D7AA33 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A6164C50F800D7AA33 /* AdSupport.framework */; };
-		3D1525A9164C50FE00D7AA33 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A8164C50FE00D7AA33 /* Social.framework */; };
+		3D1525A5164C50F200D7AA33 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A4164C50F200D7AA33 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3D1525A7164C50F800D7AA33 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A6164C50F800D7AA33 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3D1525A9164C50FE00D7AA33 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A8164C50FE00D7AA33 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3D1525AC164C536300D7AA33 /* FLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1525AB164C536300D7AA33 /* FLLoginViewController.m */; };
 		9B0C156415234B7A00B14CF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0C156315234B7A00B14CF7 /* UIKit.framework */; };
 		9B0C156615234B7A00B14CF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0C156515234B7A00B14CF7 /* Foundation.framework */; };

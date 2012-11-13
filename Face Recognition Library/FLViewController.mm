@@ -28,6 +28,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionStateChanged:) name:SessionStateChangedNotification object:nil];
+    
+    [self populateUserDetails];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -35,7 +37,7 @@
     [super viewWillAppear:animated];
     if (FBSession.activeSession.isOpen)
     {
-        [self populateUserDetails];
+//        [self populateUserDetails];
     }
     else if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded)
     {
@@ -70,7 +72,26 @@
 {
     if (FBSession.activeSession.isOpen)
     {
-        NSLog(@"Session is open!");
+        FBRequestConnection *requester = [[FBRequestConnection alloc] init];
+        FBRequest *request = [FBRequest requestWithGraphPath:@"me?fields=events"
+                                                 parameters:@{@"fields" : @"name"}
+                                                 HTTPMethod:@"GET"];
+        [requester addRequest:request completionHandler:^(FBRequestConnection *connection, id result, NSError *error)
+        {
+            if (!error)
+            {
+                FBGraphObject *object = result;
+                NSLog(@"Count: %i", [object count]);
+                NSEnumerator *enumer = [object keyEnumerator];
+                id obj;
+                while (obj = [enumer nextObject])
+                {
+                    NSLog(@"obj: %@", obj);
+                }
+            }
+        }];
+        
+        [requester start];
     }
 }
 
