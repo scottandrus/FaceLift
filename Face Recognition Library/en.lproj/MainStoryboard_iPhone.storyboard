@@ -51,75 +51,75 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="wedheadshot.jpg" id="GzZ-9K-C3B">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="wedheadshot.jpg" id="GzZ-9K-C3B">
                                 <rect key="frame" x="0.0" y="0.0" width="122" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="w5B-8A-Jpq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="w5B-8A-Jpq">
                                 <rect key="frame" x="119" y="120" width="122" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="alcohol_rehab_success.jpg" id="xUp-Ci-sTP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="alcohol_rehab_success.jpg" id="xUp-Ci-sTP">
                                 <rect key="frame" x="198" y="240" width="122" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="nnQ-Zn-6hZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="nnQ-Zn-6hZ">
                                 <rect key="frame" x="-30" y="240" width="122" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="alcohol_rehab_success.jpg" id="32I-hV-mKv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="alcohol_rehab_success.jpg" id="32I-hV-mKv">
                                 <rect key="frame" x="239" y="0.0" width="122" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="ER1-Xj-qOv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="ER1-Xj-qOv">
                                 <rect key="frame" x="239" y="120" width="122" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="mf3-cO-3Cx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="mf3-cO-3Cx">
                                 <rect key="frame" x="239" y="361" width="122" height="122"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="alcohol_rehab_success.jpg" id="xpY-8z-HYu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="alcohol_rehab_success.jpg" id="xpY-8z-HYu">
                                 <rect key="frame" x="0.0" y="120" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="RFj-RF-Nsc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="RFj-RF-Nsc">
                                 <rect key="frame" x="60" y="120" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="420-t1-1t9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="420-t1-1t9">
                                 <rect key="frame" x="0.0" y="180" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="AMl-3X-hsL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="AMl-3X-hsL">
                                 <rect key="frame" x="60" y="180" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="wedheadshot.jpg" id="U83-jQ-v1a">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="wedheadshot.jpg" id="U83-jQ-v1a">
                                 <rect key="frame" x="119" y="0.0" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="mOy-Dn-ndF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="mOy-Dn-ndF">
                                 <rect key="frame" x="179" y="0.0" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="wedheadshot.jpg" id="L81-4p-m6U">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="wedheadshot.jpg" id="L81-4p-m6U">
                                 <rect key="frame" x="119" y="60" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="wedheadshot.jpg" id="Vgk-fR-Zgg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="wedheadshot.jpg" id="Vgk-fR-Zgg">
                                 <rect key="frame" x="179" y="60" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="fcJ-pd-Uc4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="fcJ-pd-Uc4">
                                 <rect key="frame" x="139" y="240" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="2n9-9V-kf6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Drew+Burchfield+IEBA+Conference+Day+2+Yo_EBVsEbMIl.jpg" id="2n9-9V-kf6">
                                 <rect key="frame" x="77" y="240" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="LSY-ho-W7W">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="321068_223279641057506_1481430_n.jpg" id="LSY-ho-W7W">
                                 <rect key="frame" x="0.0" y="361" width="242" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -141,7 +141,7 @@
                                 <rect key="frame" x="65" y="284" width="191" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" id="Mdp-MU-iPL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="Mdp-MU-iPL">
                                 <rect key="frame" x="99" y="293" width="125" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
