@@ -720,9 +720,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9B0C155E15234B7A00B14CF7 /* Face Recognition Library */ = {
+		9B0C155E15234B7A00B14CF7 /* FaceLift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B0C157D15234B7A00B14CF7 /* Build configuration list for PBXNativeTarget "Face Recognition Library" */;
+			buildConfigurationList = 9B0C157D15234B7A00B14CF7 /* Build configuration list for PBXNativeTarget "FaceLift" */;
 			buildPhases = (
 				9B0C155B15234B7A00B14CF7 /* Sources */,
 				9B0C155C15234B7A00B14CF7 /* Frameworks */,
@@ -733,7 +733,7 @@
 			dependencies = (
 				9B0C1694152356D000B14CF7 /* PBXTargetDependency */,
 			);
-			name = "Face Recognition Library";
+			name = FaceLift;
 			productName = "Face Recognition Library";
 			productReference = 9B0C155F15234B7A00B14CF7 /* Face Recognition Library.app */;
 			productType = "com.apple.product-type.application";
@@ -775,7 +775,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B0C155E15234B7A00B14CF7 /* Face Recognition Library */,
+				9B0C155E15234B7A00B14CF7 /* FaceLift */,
 				9B0C158315234DCA00B14CF7 /* OpenCV-iPhone */,
 			);
 		};
@@ -1115,7 +1115,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B0C157D15234B7A00B14CF7 /* Build configuration list for PBXNativeTarget "Face Recognition Library" */ = {
+		9B0C157D15234B7A00B14CF7 /* Build configuration list for PBXNativeTarget "FaceLift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B0C157E15234B7A00B14CF7 /* Debug */,

@@ -59,7 +59,7 @@ NSString *const SessionStateChangedNotification = @"self:SessionStateChangedNoti
 
 - (void)openSessionWithLoginUI:(BOOL)allowLoginUI
 {
-    NSArray *permissions = @[@"email"];
+    NSArray *permissions = @[@"user_events"];
     [FBSession openActiveSessionWithReadPermissions:permissions allowLoginUI:allowLoginUI
                                   completionHandler:^(FBSession *session, FBSessionState state, NSError *error)
      {
