@@ -18,14 +18,17 @@
 #import "FLPerson.h"
 
 
-
-
 // Different Graph endpoints
 
 // Returns a list of people who are attending for all events that
 // the signed-in user is also attending. This is the first place
 // to look for potential matches.
 NSString * const AttendingOfAttending = @"me?fields=events.type(attending).fields(attending.fields(id,name,picture.type(large)))";
+
+// Since people may not hit attend/maybe/decline but still show up anyway,
+// the best way to 'expand' the pool of potential people is to look at who hasn't
+// responded, since they are the next most likely group to find a match.
+NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(noreply.fields(id,name,picture.type(large)))";
 
 //@"me?fields=events.type(not_replied).fields(invited.fields(picture.type(large)))"
 
@@ -81,12 +84,14 @@ NSString * const AttendingOfAttending = @"me?fields=events.type(attending).field
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fetchAttendingOfAttending
+#pragma mark - Facebook
+
+- (void)fetchEventList:(NSString *)graphPath withPeople:(NSString *)listStatus
 {
     if (FBSession.activeSession.isOpen)
     {
         FBRequestConnection *requester = [[FBRequestConnection alloc] init];
-        FBRequest *request = [FBRequest requestForGraphPath:AttendingOfAttending];
+        FBRequest *request = [FBRequest requestForGraphPath:graphPath];
         [requester addRequest:request
             completionHandler:^(FBRequestConnection *connection, id result, NSError *error)
          {
@@ -96,8 +101,8 @@ NSString * const AttendingOfAttending = @"me?fields=events.type(attending).field
                  NSArray *events = [[result objectForKey:@"events"] objectForKey:@"data"];
                  for (NSDictionary* e in events)
                  {
-                     NSArray *attending = [[e objectForKey:@"attending"] objectForKey:@"data"];
-                     for (NSDictionary* u in attending)
+                     NSArray *list = [[e objectForKey:listStatus] objectForKey:@"data"];
+                     for (NSDictionary* u in list)
                      {
                          FLPerson *p = [[FLPerson alloc] init];
                          [p setUid:[u objectForKey:@"id"]];
@@ -127,7 +132,8 @@ NSString * const AttendingOfAttending = @"me?fields=events.type(attending).field
 {
     if (FBSession.activeSession.isOpen)
     {
-        [self fetchAttendingOfAttending];
+        [self fetchEventList:AttendingOfAttending withPeople:@"attending"];
+        [self fetchEventList:NoReplyOfAttending withPeople:@"noreply"];
     }
     else
     {
@@ -135,7 +141,6 @@ NSString * const AttendingOfAttending = @"me?fields=events.type(attending).field
     }
 }
 
-#pragma mark - Facebook
 
 
 #pragma mark - IBActions
