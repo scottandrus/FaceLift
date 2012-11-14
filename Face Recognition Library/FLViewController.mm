@@ -6,13 +6,28 @@
 //  Copyright (c) 2012 ENGM274. All rights reserved.
 //
 
+#import <FacebookSDK/FacebookSDK.h>
+#import "AppDelegate.h"
+
+#import "opencv2/opencv.hpp"
+#import "facerec.hpp"
+
 #import "FLViewController.h"
 #import "FLLoginViewController.h"
 #import "SAViewManipulator.h"
-#import "opencv2/opencv.hpp"
-#import "facerec.hpp"
-#import "AppDelegate.h"
-#import <FacebookSDK/FacebookSDK.h>
+#import "FLPerson.h"
+
+
+
+
+// Different Graph endpoints
+
+// Returns a list of people who are attending for all events that
+// the signed-in user is also attending. This is the first place
+// to look for potential matches.
+NSString * const AttendingOfAttending = @"me?fields=events.type(attending).fields(attending.fields(id,name,picture.type(large)))";
+
+//@"me?fields=events.type(not_replied).fields(invited.fields(picture.type(large)))"
 
 @interface FLViewController ()
 
@@ -28,8 +43,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionStateChanged:) name:SessionStateChangedNotification object:nil];
-    
-    [self populateUserDetails];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -68,28 +81,43 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)populateUserDetails
+- (void)fetchAttendingOfAttending
 {
     if (FBSession.activeSession.isOpen)
     {
         FBRequestConnection *requester = [[FBRequestConnection alloc] init];
-        FBRequest *request = [FBRequest requestWithGraphPath:@"me?fields=events"
-                                                 parameters:@{@"fields" : @"name"}
-                                                 HTTPMethod:@"GET"];
-        [requester addRequest:request completionHandler:^(FBRequestConnection *connection, id result, NSError *error)
-        {
-            if (!error)
-            {
-                FBGraphObject *object = result;
-                NSLog(@"Count: %i", [object count]);
-                NSEnumerator *enumer = [object keyEnumerator];
-                id obj;
-                while (obj = [enumer nextObject])
-                {
-                    NSLog(@"obj: %@", obj);
-                }
-            }
-        }];
+        FBRequest *request = [FBRequest requestForGraphPath:AttendingOfAttending];
+        [requester addRequest:request
+            completionHandler:^(FBRequestConnection *connection, id result, NSError *error)
+         {
+             if (!error)
+             {
+                 NSMutableArray *allPeople = [[NSMutableArray alloc] init];
+                 NSArray *events = [[result objectForKey:@"events"] objectForKey:@"data"];
+                 for (NSDictionary* e in events)
+                 {
+                     NSArray *attending = [[e objectForKey:@"attending"] objectForKey:@"data"];
+                     for (NSDictionary* u in attending)
+                     {
+                         FLPerson *p = [[FLPerson alloc] init];
+                         [p setUid:[u objectForKey:@"id"]];
+                         [p setName:[u objectForKey:@"name"]];
+                         [p setPictureUrl:[NSURL URLWithString:[[[u objectForKey:@"picture"] objectForKey:@"data"] objectForKey:@"url"]]];
+                         [allPeople addObject:p];
+                     }
+                 }
+                 
+                 // Here we might send all data in the list to a queue somewhere for processing,
+                 // either to download the pictures or to do facial recognition.
+                 
+                 // For now, just print to console.
+                 for (FLPerson* p in allPeople)
+                 {
+                     NSLog(@"%@: %@", p.name, p.pictureUrl);
+                 }
+
+             }
+         }];
         
         [requester start];
     }
@@ -99,7 +127,7 @@
 {
     if (FBSession.activeSession.isOpen)
     {
-        [self populateUserDetails];
+        [self fetchAttendingOfAttending];
     }
     else
     {

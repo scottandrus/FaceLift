@@ -12,6 +12,7 @@
 		3D1525A7164C50F800D7AA33 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A6164C50F800D7AA33 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3D1525A9164C50FE00D7AA33 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1525A8164C50FE00D7AA33 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3D1525AC164C536300D7AA33 /* FLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1525AB164C536300D7AA33 /* FLLoginViewController.m */; };
+		3D1525CF16544DA700D7AA33 /* FLPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1525CE16544DA700D7AA33 /* FLPerson.m */; };
 		9B0C156415234B7A00B14CF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0C156315234B7A00B14CF7 /* UIKit.framework */; };
 		9B0C156615234B7A00B14CF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0C156515234B7A00B14CF7 /* Foundation.framework */; };
 		9B0C156815234B7A00B14CF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0C156715234B7A00B14CF7 /* CoreGraphics.framework */; };
@@ -165,7 +166,9 @@
 		3D1525A8164C50FE00D7AA33 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3D1525AA164C536300D7AA33 /* FLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLLoginViewController.h; sourceTree = "<group>"; };
 		3D1525AB164C536300D7AA33 /* FLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLLoginViewController.m; sourceTree = "<group>"; };
-		9B0C155F15234B7A00B14CF7 /* Face Recognition Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Recognition Library.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1525CD16544DA700D7AA33 /* FLPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLPerson.h; sourceTree = "<group>"; };
+		3D1525CE16544DA700D7AA33 /* FLPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLPerson.m; sourceTree = "<group>"; };
+		9B0C155F15234B7A00B14CF7 /* Face Recognition Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Face Recognition Library.app"; path = FaceLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0C156315234B7A00B14CF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9B0C156515234B7A00B14CF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9B0C156715234B7A00B14CF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -340,6 +343,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D1525CB16544D7900D7AA33 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D1525CD16544DA700D7AA33 /* FLPerson.h */,
+				3D1525CE16544DA700D7AA33 /* FLPerson.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		9B0C155415234B7A00B14CF7 = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +396,7 @@
 				D26BCC6E16430D66007030DD /* Utilities */,
 				D26BCC5116430AF4007030DD /* App Delegate */,
 				D26BCC5316430AFC007030DD /* View Controller */,
+				3D1525CB16544D7900D7AA33 /* Models */,
 				D2BA63331649B29D00ADC685 /* Storyboards */,
 				9B0C16AC1523D18A00B14CF7 /* FaceRecognition */,
 				9B0C16C71523D46200B14CF7 /* Images */,
@@ -830,6 +843,7 @@
 				D26BCC5B16430B17007030DD /* OBGradientView.m in Sources */,
 				D26BCC5C16430B17007030DD /* SAViewManipulator.m in Sources */,
 				3D1525AC164C536300D7AA33 /* FLLoginViewController.m in Sources */,
+				3D1525CF16544DA700D7AA33 /* FLPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
