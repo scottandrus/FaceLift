@@ -133,6 +133,21 @@
 		9B0C16DD1523D67D00B14CF7 /* 4_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C16D11523D67D00B14CF7 /* 4_2.jpg */; };
 		9B0C16DE1523D67D00B14CF7 /* 4_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C16D21523D67D00B14CF7 /* 4_1.jpg */; };
 		9B0C16DF1523D67D00B14CF7 /* 3_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C16D31523D67D00B14CF7 /* 3_3.jpg */; };
+		D253C9C9165579D90052D8CC /* frontViewControllerDropShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D253C9C5165579D90052D8CC /* frontViewControllerDropShadow.png */; };
+		D253C9CA165579D90052D8CC /* frontViewControllerDropShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D253C9C6165579D90052D8CC /* frontViewControllerDropShadow@2x.png */; };
+		D253C9CB165579D90052D8CC /* JSSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9C8165579D90052D8CC /* JSSlidingViewController.m */; };
+		D253C9D116557A1F0052D8CC /* FLMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D253C9D016557A1F0052D8CC /* FLMenuViewController.xib */; };
+		D253C9D416557A3C0052D8CC /* FLMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9D316557A3C0052D8CC /* FLMenuViewController.m */; };
+		D253C9DB165583FD0052D8CC /* UIColor+i7HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9DA165583FD0052D8CC /* UIColor+i7HexColor.m */; };
+		D253C9F0165589FB0052D8CC /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9DE165589FA0052D8CC /* AFHTTPClient.m */; };
+		D253C9F1165589FB0052D8CC /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9E0165589FA0052D8CC /* AFHTTPRequestOperation.m */; };
+		D253C9F2165589FB0052D8CC /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9E2165589FA0052D8CC /* AFImageRequestOperation.m */; };
+		D253C9F3165589FB0052D8CC /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9E4165589FA0052D8CC /* AFJSONRequestOperation.m */; };
+		D253C9F4165589FB0052D8CC /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9E6165589FA0052D8CC /* AFNetworkActivityIndicatorManager.m */; };
+		D253C9F5165589FB0052D8CC /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9E9165589FA0052D8CC /* AFPropertyListRequestOperation.m */; };
+		D253C9F6165589FB0052D8CC /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9EB165589FA0052D8CC /* AFURLConnectionOperation.m */; };
+		D253C9F7165589FB0052D8CC /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9ED165589FA0052D8CC /* AFXMLRequestOperation.m */; };
+		D253C9F8165589FB0052D8CC /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9EF165589FA0052D8CC /* UIImageView+AFNetworking.m */; };
 		D26BCC5A16430B17007030DD /* FLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D26BCC5516430B17007030DD /* FLViewController.mm */; };
 		D26BCC5B16430B17007030DD /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCC5716430B17007030DD /* OBGradientView.m */; };
 		D26BCC5C16430B17007030DD /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCC5916430B17007030DD /* SAViewManipulator.m */; };
@@ -168,7 +183,7 @@
 		3D1525AB164C536300D7AA33 /* FLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLLoginViewController.m; sourceTree = "<group>"; };
 		3D1525CD16544DA700D7AA33 /* FLPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLPerson.h; sourceTree = "<group>"; };
 		3D1525CE16544DA700D7AA33 /* FLPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLPerson.m; sourceTree = "<group>"; };
-		9B0C155F15234B7A00B14CF7 /* Face Recognition Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Face Recognition Library.app"; path = FaceLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0C155F15234B7A00B14CF7 /* FaceLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0C156315234B7A00B14CF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9B0C156515234B7A00B14CF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9B0C156715234B7A00B14CF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -292,6 +307,34 @@
 		9B0C16D11523D67D00B14CF7 /* 4_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4_2.jpg; sourceTree = "<group>"; };
 		9B0C16D21523D67D00B14CF7 /* 4_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4_1.jpg; sourceTree = "<group>"; };
 		9B0C16D31523D67D00B14CF7 /* 3_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3_3.jpg; sourceTree = "<group>"; };
+		D253C9C5165579D90052D8CC /* frontViewControllerDropShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frontViewControllerDropShadow.png; sourceTree = "<group>"; };
+		D253C9C6165579D90052D8CC /* frontViewControllerDropShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frontViewControllerDropShadow@2x.png"; sourceTree = "<group>"; };
+		D253C9C7165579D90052D8CC /* JSSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSlidingViewController.h; sourceTree = "<group>"; };
+		D253C9C8165579D90052D8CC /* JSSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSlidingViewController.m; sourceTree = "<group>"; };
+		D253C9D016557A1F0052D8CC /* FLMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLMenuViewController.xib; path = JSSlidingViewController/FLMenuViewController.xib; sourceTree = "<group>"; };
+		D253C9D216557A3C0052D8CC /* FLMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLMenuViewController.h; path = JSSlidingViewController/FLMenuViewController.h; sourceTree = "<group>"; };
+		D253C9D316557A3C0052D8CC /* FLMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLMenuViewController.m; path = JSSlidingViewController/FLMenuViewController.m; sourceTree = "<group>"; };
+		D253C9D9165583FD0052D8CC /* UIColor+i7HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+i7HexColor.h"; sourceTree = "<group>"; };
+		D253C9DA165583FD0052D8CC /* UIColor+i7HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+i7HexColor.m"; sourceTree = "<group>"; };
+		D253C9DD165589FA0052D8CC /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		D253C9DE165589FA0052D8CC /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		D253C9DF165589FA0052D8CC /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		D253C9E0165589FA0052D8CC /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		D253C9E1165589FA0052D8CC /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		D253C9E2165589FA0052D8CC /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		D253C9E3165589FA0052D8CC /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		D253C9E4165589FA0052D8CC /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		D253C9E5165589FA0052D8CC /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		D253C9E6165589FA0052D8CC /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		D253C9E7165589FA0052D8CC /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		D253C9E8165589FA0052D8CC /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		D253C9E9165589FA0052D8CC /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		D253C9EA165589FA0052D8CC /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		D253C9EB165589FA0052D8CC /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		D253C9EC165589FA0052D8CC /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		D253C9ED165589FA0052D8CC /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		D253C9EE165589FA0052D8CC /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		D253C9EF165589FA0052D8CC /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		D26BCC5416430B17007030DD /* FLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLViewController.h; sourceTree = "<group>"; };
 		D26BCC5516430B17007030DD /* FLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FLViewController.mm; sourceTree = "<group>"; };
 		D26BCC5616430B17007030DD /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
@@ -366,7 +409,7 @@
 		9B0C156015234B7A00B14CF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B0C155F15234B7A00B14CF7 /* Face Recognition Library.app */,
+				9B0C155F15234B7A00B14CF7 /* FaceLift.app */,
 				9B0C158415234DCA00B14CF7 /* libOpenCV-iPhone.a */,
 			);
 			name = Products;
@@ -402,8 +445,7 @@
 				9B0C16C71523D46200B14CF7 /* Images */,
 				9B0C156A15234B7A00B14CF7 /* Supporting Files */,
 			);
-			name = FaceLift;
-			path = "Face Recognition Library";
+			path = FaceLift;
 			sourceTree = "<group>";
 		};
 		9B0C156A15234B7A00B14CF7 /* Supporting Files */ = {
@@ -424,7 +466,7 @@
 				9B0C15941523514E00B14CF7 /* OpenCV */,
 			);
 			name = ThirdParty;
-			path = "Face Recognition Library";
+			path = FaceLift;
 			sourceTree = "<group>";
 		};
 		9B0C15941523514E00B14CF7 /* OpenCV */ = {
@@ -640,6 +682,43 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		D253C9C4165579D90052D8CC /* JSSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D253C9C5165579D90052D8CC /* frontViewControllerDropShadow.png */,
+				D253C9C6165579D90052D8CC /* frontViewControllerDropShadow@2x.png */,
+				D253C9C7165579D90052D8CC /* JSSlidingViewController.h */,
+				D253C9C8165579D90052D8CC /* JSSlidingViewController.m */,
+			);
+			path = JSSlidingViewController;
+			sourceTree = "<group>";
+		};
+		D253C9DC165589FA0052D8CC /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				D253C9DD165589FA0052D8CC /* AFHTTPClient.h */,
+				D253C9DE165589FA0052D8CC /* AFHTTPClient.m */,
+				D253C9DF165589FA0052D8CC /* AFHTTPRequestOperation.h */,
+				D253C9E0165589FA0052D8CC /* AFHTTPRequestOperation.m */,
+				D253C9E1165589FA0052D8CC /* AFImageRequestOperation.h */,
+				D253C9E2165589FA0052D8CC /* AFImageRequestOperation.m */,
+				D253C9E3165589FA0052D8CC /* AFJSONRequestOperation.h */,
+				D253C9E4165589FA0052D8CC /* AFJSONRequestOperation.m */,
+				D253C9E5165589FA0052D8CC /* AFNetworkActivityIndicatorManager.h */,
+				D253C9E6165589FA0052D8CC /* AFNetworkActivityIndicatorManager.m */,
+				D253C9E7165589FA0052D8CC /* AFNetworking.h */,
+				D253C9E8165589FA0052D8CC /* AFPropertyListRequestOperation.h */,
+				D253C9E9165589FA0052D8CC /* AFPropertyListRequestOperation.m */,
+				D253C9EA165589FA0052D8CC /* AFURLConnectionOperation.h */,
+				D253C9EB165589FA0052D8CC /* AFURLConnectionOperation.m */,
+				D253C9EC165589FA0052D8CC /* AFXMLRequestOperation.h */,
+				D253C9ED165589FA0052D8CC /* AFXMLRequestOperation.m */,
+				D253C9EE165589FA0052D8CC /* UIImageView+AFNetworking.h */,
+				D253C9EF165589FA0052D8CC /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
 		D26BCC5116430AF4007030DD /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,6 +731,9 @@
 		D26BCC5316430AFC007030DD /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D253C9D016557A1F0052D8CC /* FLMenuViewController.xib */,
+				D253C9D216557A3C0052D8CC /* FLMenuViewController.h */,
+				D253C9D316557A3C0052D8CC /* FLMenuViewController.m */,
 				D26BCC5416430B17007030DD /* FLViewController.h */,
 				D26BCC5516430B17007030DD /* FLViewController.mm */,
 				3D1525AA164C536300D7AA33 /* FLLoginViewController.h */,
@@ -663,6 +745,10 @@
 		D26BCC6E16430D66007030DD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D253C9C4165579D90052D8CC /* JSSlidingViewController */,
+				D253C9DC165589FA0052D8CC /* AFNetworking */,
+				D253C9D9165583FD0052D8CC /* UIColor+i7HexColor.h */,
+				D253C9DA165583FD0052D8CC /* UIColor+i7HexColor.m */,
 				D26BCC5616430B17007030DD /* OBGradientView.h */,
 				D26BCC5716430B17007030DD /* OBGradientView.m */,
 				D26BCC5816430B17007030DD /* SAViewManipulator.h */,
@@ -748,7 +834,7 @@
 			);
 			name = FaceLift;
 			productName = "Face Recognition Library";
-			productReference = 9B0C155F15234B7A00B14CF7 /* Face Recognition Library.app */;
+			productReference = 9B0C155F15234B7A00B14CF7 /* FaceLift.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9B0C158315234DCA00B14CF7 /* OpenCV-iPhone */ = {
@@ -821,6 +907,9 @@
 				D2BA633D1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg in Resources */,
 				D2BA63411649BAC800ADC685 /* blank_poloroid_frame.png in Resources */,
 				D2BA63431649BC0A00ADC685 /* alcohol_rehab_success.jpg in Resources */,
+				D253C9C9165579D90052D8CC /* frontViewControllerDropShadow.png in Resources */,
+				D253C9CA165579D90052D8CC /* frontViewControllerDropShadow@2x.png in Resources */,
+				D253C9D116557A1F0052D8CC /* FLMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,6 +933,18 @@
 				D26BCC5C16430B17007030DD /* SAViewManipulator.m in Sources */,
 				3D1525AC164C536300D7AA33 /* FLLoginViewController.m in Sources */,
 				3D1525CF16544DA700D7AA33 /* FLPerson.m in Sources */,
+				D253C9CB165579D90052D8CC /* JSSlidingViewController.m in Sources */,
+				D253C9D416557A3C0052D8CC /* FLMenuViewController.m in Sources */,
+				D253C9DB165583FD0052D8CC /* UIColor+i7HexColor.m in Sources */,
+				D253C9F0165589FB0052D8CC /* AFHTTPClient.m in Sources */,
+				D253C9F1165589FB0052D8CC /* AFHTTPRequestOperation.m in Sources */,
+				D253C9F2165589FB0052D8CC /* AFImageRequestOperation.m in Sources */,
+				D253C9F3165589FB0052D8CC /* AFJSONRequestOperation.m in Sources */,
+				D253C9F4165589FB0052D8CC /* AFNetworkActivityIndicatorManager.m in Sources */,
+				D253C9F5165589FB0052D8CC /* AFPropertyListRequestOperation.m in Sources */,
+				D253C9F6165589FB0052D8CC /* AFURLConnectionOperation.m in Sources */,
+				D253C9F7165589FB0052D8CC /* AFXMLRequestOperation.m in Sources */,
+				D253C9F8165589FB0052D8CC /* UIImageView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1013,12 +1114,12 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Face Recognition Library/Face Recognition Library-Prefix.pch";
+				GCC_PREFIX_HEADER = "FaceLift/Face Recognition Library-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				INFOPLIST_FILE = "Face Recognition Library/Face Recognition Library-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FaceLift/Face Recognition Library-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -1044,10 +1145,10 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Face Recognition Library/Face Recognition Library-Prefix.pch";
+				GCC_PREFIX_HEADER = "FaceLift/Face Recognition Library-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				INFOPLIST_FILE = "Face Recognition Library/Face Recognition Library-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FaceLift/Face Recognition Library-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (

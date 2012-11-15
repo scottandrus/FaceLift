@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  Face Recognition Library
+//  FaceLift
 //
 //  Created by Pedro Centieiro on 3/28/12.
 //  Copyright (c) 2012. All rights reserved.
@@ -9,7 +9,6 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 #import "AppDelegate.h"
-#import "FLViewController.h"
 #import "FLLoginViewController.h"
 
 NSString *const SessionStateChangedNotification = @"self:SessionStateChangedNotification";
@@ -20,8 +19,29 @@ NSString *const SessionStateChangedNotification = @"self:SessionStateChangedNoti
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [FBProfilePictureView class];    
+    //[FBProfilePictureView class];
+    
+    self.frontVC = (FLViewController *)self.window.rootViewController;
+    self.backVC = [[FLMenuViewController alloc] initWithNibName:@"FLMenuViewController" bundle:nil];
+    
+    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:self.frontVC backViewController:self.backVC];
+    
+    self.viewController.delegate = self;
+    self.window.rootViewController = self.viewController;
+    
     return YES;
+}
+
+- (void)slidingViewControllerWillOpen:(JSSlidingViewController *)viewController {
+    if (FBSession.activeSession.isOpen) {
+        [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
+            
+            if (!error) {
+                self.backVC.profilePictureImageView.profileID = user.id;
+                self.backVC.fbNameLabel.text = user.name;
+            }
+        }];
+    }
 }
 
 - (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error
