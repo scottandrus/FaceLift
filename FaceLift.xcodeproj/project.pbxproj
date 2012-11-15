@@ -148,6 +148,8 @@
 		D253C9F6165589FB0052D8CC /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9EB165589FA0052D8CC /* AFURLConnectionOperation.m */; };
 		D253C9F7165589FB0052D8CC /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9ED165589FA0052D8CC /* AFXMLRequestOperation.m */; };
 		D253C9F8165589FB0052D8CC /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9EF165589FA0052D8CC /* UIImageView+AFNetworking.m */; };
+		D253C9FB1655923E0052D8CC /* frontViewControllerDropShadowVertical.png in Resources */ = {isa = PBXBuildFile; fileRef = D253C9F91655923E0052D8CC /* frontViewControllerDropShadowVertical.png */; };
+		D253C9FC1655923E0052D8CC /* frontViewControllerDropShadowVertical@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D253C9FA1655923E0052D8CC /* frontViewControllerDropShadowVertical@2x.png */; };
 		D26BCC5A16430B17007030DD /* FLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D26BCC5516430B17007030DD /* FLViewController.mm */; };
 		D26BCC5B16430B17007030DD /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCC5716430B17007030DD /* OBGradientView.m */; };
 		D26BCC5C16430B17007030DD /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCC5916430B17007030DD /* SAViewManipulator.m */; };
@@ -335,6 +337,8 @@
 		D253C9ED165589FA0052D8CC /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		D253C9EE165589FA0052D8CC /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		D253C9EF165589FA0052D8CC /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		D253C9F91655923E0052D8CC /* frontViewControllerDropShadowVertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frontViewControllerDropShadowVertical.png; path = JSSlidingViewController/frontViewControllerDropShadowVertical.png; sourceTree = "<group>"; };
+		D253C9FA1655923E0052D8CC /* frontViewControllerDropShadowVertical@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frontViewControllerDropShadowVertical@2x.png"; path = "JSSlidingViewController/frontViewControllerDropShadowVertical@2x.png"; sourceTree = "<group>"; };
 		D26BCC5416430B17007030DD /* FLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLViewController.h; sourceTree = "<group>"; };
 		D26BCC5516430B17007030DD /* FLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FLViewController.mm; sourceTree = "<group>"; };
 		D26BCC5616430B17007030DD /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
@@ -664,6 +668,8 @@
 		9B0C16C71523D46200B14CF7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D253C9F91655923E0052D8CC /* frontViewControllerDropShadowVertical.png */,
+				D253C9FA1655923E0052D8CC /* frontViewControllerDropShadowVertical@2x.png */,
 				D2BA63371649B91E00ADC685 /* People */,
 				D2BA63351649B6FE00ADC685 /* Camera@2x.png */,
 				9B0C16C81523D67D00B14CF7 /* 1_1.jpg */,
@@ -910,6 +916,8 @@
 				D253C9C9165579D90052D8CC /* frontViewControllerDropShadow.png in Resources */,
 				D253C9CA165579D90052D8CC /* frontViewControllerDropShadow@2x.png in Resources */,
 				D253C9D116557A1F0052D8CC /* FLMenuViewController.xib in Resources */,
+				D253C9FB1655923E0052D8CC /* frontViewControllerDropShadowVertical.png in Resources */,
+				D253C9FC1655923E0052D8CC /* frontViewControllerDropShadowVertical@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
