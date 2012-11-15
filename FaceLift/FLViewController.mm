@@ -7,15 +7,17 @@
 //
 
 #import <FacebookSDK/FacebookSDK.h>
-#import "AppDelegate.h"
+#import "AFNetworking.h"
 
 #import "opencv2/opencv.hpp"
 #import "facerec.hpp"
 
+#import "AppDelegate.h"
 #import "FLViewController.h"
 #import "FLLoginViewController.h"
 #import "SAViewManipulator.h"
 #import "FLPerson.h"
+#import "UIColor+i7HexColor.h"
 
 
 // Different Graph endpoints
@@ -119,11 +121,24 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
                  // either to download the pictures or to do facial recognition.
                  
                  // For now, just print to console.
+                 NSMutableArray *images = [[NSMutableArray alloc] init];
                  for (FLPerson* p in allPeople)
                  {
-                     NSLog(@"%@: %@", p.name, p.pictureUrl);
+//                     NSLog(@"%@: %@", p.name, p.pictureUrl);
+                     NSURLRequest* req = [[NSURLRequest alloc] initWithURL:p.pictureUrl];
+                     AFImageRequestOperation *afOp = [[AFImageRequestOperation alloc] initWithRequest:req];
+                     [afOp setCompletionBlockWithSuccess:
+                      ^(AFHTTPRequestOperation *operation, UIImage* responseObject)
+                     {
+                         [images addObject:responseObject];
+                     }
+                     failure:^(AFHTTPRequestOperation *operation, NSError *error)
+                     {
+                         NSLog(@"Error!");
+                     }];
+                     
+                     [afOp start];
                  }
-
              }
          }];
         
