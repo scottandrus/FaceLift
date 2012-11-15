@@ -44,7 +44,7 @@
 
 - (IBAction)facebookLogin:(id)sender
 {
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate openSessionWithLoginUI:YES];
 }
 
@@ -55,7 +55,7 @@
 
 - (void)sessionStateChanged:(NSNotification*)notification
 {
-    [self.presentingViewController dismissModalViewControllerAnimated:YES];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

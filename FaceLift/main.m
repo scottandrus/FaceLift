@@ -1,6 +1,6 @@
 //
 //  main.m
-//  Face Recognition Library
+//  FaceLift
 //
 //  Created by Pedro Centieiro on 3/28/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.

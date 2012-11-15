@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'Face Recognition Library' target in the 'Face Recognition Library' project
+// Prefix header for all source files of the 'FaceLift' target in the 'FaceLift' project
 //
 
 #import <Availability.h>

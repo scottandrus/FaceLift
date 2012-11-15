@@ -16,8 +16,7 @@
 #import "FLLoginViewController.h"
 #import "SAViewManipulator.h"
 #import "FLPerson.h"
-
-
+#import "UIColor+i7HexColor.h"
 
 
 // Different Graph endpoints
@@ -43,6 +42,9 @@ NSString * const AttendingOfAttending = @"me?fields=events.type(attending).field
 	// Do any additional setup after loading the view, typically from a nib.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionStateChanged:) name:SessionStateChangedNotification object:nil];
+    
+    [self customizeInterface];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -54,7 +56,7 @@ NSString * const AttendingOfAttending = @"me?fields=events.type(attending).field
     }
     else if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded)
     {
-        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [appDelegate openSessionWithLoginUI:NO];
     }
 }
@@ -147,7 +149,12 @@ NSString * const AttendingOfAttending = @"me?fields=events.type(attending).field
 #pragma mark - Utilities
 
 - (void)customizeInterface {
+    
+    // Adds a border to the imageView
     [SAViewManipulator addBorderToView:self.currentImagePreviewImageView withWidth:1 color:[UIColor darkTextColor] andRadius:0];
+    
+    // Sets gradient background for main view
+    [SAViewManipulator setGradientBackgroundImageForView:self.currentImagePreviewImageView.superview withTopColor:[UIColor colorWithHexString:@"858585"] andBottomColor:[UIColor colorWithHexString:@"4F4F4F"]];
 }
 
 - (void)showNoCameraAlert {
