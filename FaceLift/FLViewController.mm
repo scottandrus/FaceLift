@@ -204,13 +204,21 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
         // Set media types
         imagePicker.mediaTypes = mediaTypes;
         
+        // Does not allow editing
         imagePicker.allowsEditing = NO;
         
+        // Set a modal transition
+        imagePicker.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        
+        // Use a popover on the iPad
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad && sourceType != UIImagePickerControllerSourceTypeCamera) {
             self.popover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
             [self.popover presentPopoverFromBarButtonItem:self.navigationItem.leftBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
             [self.navigationItem.leftBarButtonItem setAction:@selector(shouldDismissPopover)];
-        } else {
+        }
+        
+        // We're on the iPhone
+        else {
             // Present image picker camera interface
             [viewController presentViewController:imagePicker animated:YES completion:nil];
         }
