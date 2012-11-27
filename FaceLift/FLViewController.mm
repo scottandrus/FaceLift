@@ -49,6 +49,8 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionStateChanged:) name:SessionStateChangedNotification object:nil];
     
+    fbImages = [[NSMutableArray alloc] init];
+    
     [self customizeInterface];
     
 }
@@ -120,17 +122,15 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
                  // Here we might send all data in the list to a queue somewhere for processing,
                  // either to download the pictures or to do facial recognition.
                  
-                 // For now, just print to console.
-                 NSMutableArray *images = [[NSMutableArray alloc] init];
                  for (FLPerson* p in allPeople)
                  {
-//                     NSLog(@"%@: %@", p.name, p.pictureUrl);
                      NSURLRequest* req = [[NSURLRequest alloc] initWithURL:p.pictureUrl];
                      AFImageRequestOperation *afOp = [[AFImageRequestOperation alloc] initWithRequest:req];
                      [afOp setCompletionBlockWithSuccess:
                       ^(AFHTTPRequestOperation *operation, UIImage* responseObject)
                      {
-                         [images addObject:responseObject];
+                         [fbImages addObject:responseObject];
+                         NSLog(@"Added image");
                      }
                      failure:^(AFHTTPRequestOperation *operation, NSError *error)
                      {

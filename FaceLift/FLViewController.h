@@ -11,12 +11,16 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 
 @interface FLViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+{
+    NSMutableArray* fbImages;
+}
 
 @property (strong, nonatomic) UIImage *currentImage;
 @property (strong, nonatomic) NSDictionary *currentImageInformation;
 @property (strong, nonatomic) UIPopoverController *popover;
 
 @property (strong, nonatomic) IBOutlet UIImageView *currentImagePreviewImageView;
+
 
 - (IBAction)faceRecognition:(id)sender;
 
