@@ -49,7 +49,7 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionStateChanged:) name:SessionStateChangedNotification object:nil];
     
-    fbImages = [[NSMutableArray alloc] init];
+    fbData = [[NSMutableArray alloc] init];
     
     [self customizeInterface];
     
@@ -129,7 +129,8 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
                      [afOp setCompletionBlockWithSuccess:
                       ^(AFHTTPRequestOperation *operation, UIImage* responseObject)
                      {
-                         [fbImages addObject:responseObject];
+                         [p setImage:responseObject];
+                         [fbData addObject:p];
                          NSLog(@"Added image");
                      }
                      failure:^(AFHTTPRequestOperation *operation, NSError *error)

@@ -12,7 +12,8 @@
 
 @interface FLViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
-    NSMutableArray* fbImages;
+    // Contains FLPerson objects (with images).
+    NSMutableArray* fbData;
 }
 
 @property (strong, nonatomic) UIImage *currentImage;
