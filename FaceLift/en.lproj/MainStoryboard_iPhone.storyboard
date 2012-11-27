@@ -97,6 +97,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="matchPressed" destination="2" eventType="touchUpInside" id="x0O-PU-vYn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </view>

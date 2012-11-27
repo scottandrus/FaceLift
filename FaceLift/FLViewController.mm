@@ -153,7 +153,7 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     if (FBSession.activeSession.isOpen)
     {
         [self fetchEventList:AttendingOfAttending withPeople:@"attending"];
-        [self fetchEventList:NoReplyOfAttending withPeople:@"noreply"];
+//        [self fetchEventList:NoReplyOfAttending withPeople:@"noreply"];
     }
     else
     {
@@ -167,6 +167,45 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
 
 - (IBAction)takePicturePressed {
     [self startCameraControllerFromViewController:self withDelegate:self sourceType:UIImagePickerControllerSourceTypeCamera andMediaTypes:[NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil]];
+}
+
+- (IBAction)matchPressed {
+//    UIImage *takenPhoto = self.currentImagePreviewImageView.image;
+    UIImage *takenPhoto = [[fbData lastObject] image];
+    Mat takenSrc = [self CreateIplImageFromUIImage:takenPhoto];
+    Mat takenDst;
+    cv::cvtColor(takenSrc, takenDst, CV_BGR2GRAY);
+
+    // load images
+    vector<Mat> images;
+    vector<int> labels;
+    
+    int i = 1;
+    for (FLPerson *person in fbData) {
+        
+        if (i < 20) {
+            // Create a grayscale matrix version of image
+            Mat src = [self CreateIplImageFromUIImage:person.image];
+            Mat dst;
+            cv::cvtColor(src, dst, CV_BGR2GRAY);
+            
+            images.push_back(dst);
+            labels.push_back(i);
+            
+            i++;
+        }
+        
+    }
+    
+    
+    
+    // build the Fisherfaces model
+    Fisherfaces model(images, labels);
+    
+    // test model
+    int predicted = model.predict(takenDst);
+    cout << "Guess = " << [[fbData objectAtIndex:predicted] name] << endl;
+    cout << "Actual = " << @"???" << endl;
 }
 
 #pragma mark - Utilities
