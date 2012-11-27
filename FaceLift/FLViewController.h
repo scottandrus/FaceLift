@@ -20,6 +20,8 @@
 @property (strong, nonatomic) NSDictionary *currentImageInformation;
 @property (strong, nonatomic) UIPopoverController *popover;
 
+@property (strong, nonatomic) IBOutlet UIButton *cameraButton;
+@property (strong, nonatomic) IBOutlet UIButton *matchButton;
 @property (strong, nonatomic) IBOutlet UIImageView *currentImagePreviewImageView;
 
 

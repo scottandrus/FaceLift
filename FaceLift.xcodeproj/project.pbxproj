@@ -164,6 +164,7 @@
 		D2BA633D1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2BA633C1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg */; };
 		D2BA63411649BAC800ADC685 /* blank_poloroid_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */; };
 		D2BA63431649BC0A00ADC685 /* alcohol_rehab_success.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63421649BC0A00ADC685 /* alcohol_rehab_success.jpg */; };
+		D2F83F9816655E5900440CFF /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F83F9716655E5900440CFF /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -356,6 +357,8 @@
 		D2BA633C1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 321068_223279641057506_1481430_n.jpg; sourceTree = "<group>"; };
 		D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_poloroid_frame.png; sourceTree = "<group>"; };
 		D2BA63421649BC0A00ADC685 /* alcohol_rehab_success.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alcohol_rehab_success.jpg; sourceTree = "<group>"; };
+		D2F83F9616655E5900440CFF /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		D2F83F9716655E5900440CFF /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -759,6 +762,8 @@
 				D26BCC5716430B17007030DD /* OBGradientView.m */,
 				D26BCC5816430B17007030DD /* SAViewManipulator.h */,
 				D26BCC5916430B17007030DD /* SAViewManipulator.m */,
+				D2F83F9616655E5900440CFF /* UIView+Frame.h */,
+				D2F83F9716655E5900440CFF /* UIView+Frame.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -953,6 +958,7 @@
 				D253C9F6165589FB0052D8CC /* AFURLConnectionOperation.m in Sources */,
 				D253C9F7165589FB0052D8CC /* AFXMLRequestOperation.m in Sources */,
 				D253C9F8165589FB0052D8CC /* UIImageView+AFNetworking.m in Sources */,
+				D2F83F9816655E5900440CFF /* UIView+Frame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

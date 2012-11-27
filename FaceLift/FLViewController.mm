@@ -18,6 +18,7 @@
 #import "SAViewManipulator.h"
 #import "FLPerson.h"
 #import "UIColor+i7HexColor.h"
+#import "UIView+Frame.h"
 
 
 // Different Graph endpoints
@@ -298,7 +299,28 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     // Dismiss camera interface
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^(void) {
+        
+        if (!self.currentImagePreviewImageView.image) {
+            
+            [UIView animateWithDuration:.4 animations:^(void){
+                self.cameraButton.top -= 30;
+                
+            } completion:^(BOOL finished) {
+                
+                [UIView transitionWithView:self.matchButton duration:.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
+                    self.matchButton.hidden = NO;
+                } completion:nil];
+                
+            }];
+        }
+        
+        [UIView transitionWithView:self.currentImagePreviewImageView duration:.4 options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
+            self.currentImagePreviewImageView.image = self.currentImage;
+        } completion:nil];
+        
+        
+    }];
     
     // Grab the media type
     NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
@@ -315,7 +337,7 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
         
         // And the current image is placed in the imageview.
 //        [self updateCurrentImageView];
-        self.currentImagePreviewImageView.image = self.currentImage;
+
         
         // TODO: Cache image
     }
@@ -344,6 +366,8 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
 
 - (void)viewDidUnload {
     [self setCurrentImagePreviewImageView:nil];
+    [self setCameraButton:nil];
+    [self setMatchButton:nil];
     [super viewDidUnload];
 }
 @end

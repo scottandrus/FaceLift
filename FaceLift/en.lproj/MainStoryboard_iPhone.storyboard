@@ -86,6 +86,18 @@
                                         <color key="shadowColor" red="0.23873963647959184" green="0.23873963647959184" blue="0.23873963647959184" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="shadowOffset" width="0.0" height="2"/>
                                     </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vsJ-rA-Lu7">
+                                        <rect key="frame" x="90" y="208" width="141" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <state key="normal" title="Match">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                             </view>
                         </subviews>
@@ -93,7 +105,9 @@
                     <navigationItem key="navigationItem" id="wlY-7O-Jen"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="cameraButton" destination="D9O-C7-qSC" id="GsB-PC-wHE"/>
                         <outlet property="currentImagePreviewImageView" destination="Mdp-MU-iPL" id="7z5-Sr-wLT"/>
+                        <outlet property="matchButton" destination="vsJ-rA-Lu7" id="mbZ-4p-OWJ"/>
                         <segue destination="AZk-TL-QeM" kind="modal" identifier="LoginSegue" modalTransitionStyle="flipHorizontal" id="4OR-ta-hoF"/>
                     </connections>
                 </viewController>
@@ -117,7 +131,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FLViewController.h"/>
             <relationships>
                 <relationship kind="action" name="faceRecognition:"/>
+                <relationship kind="outlet" name="cameraButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="currentImagePreviewImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="matchButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>
