@@ -16,9 +16,9 @@
 #import "FLViewController.h"
 #import "FLLoginViewController.h"
 #import "SAViewManipulator.h"
-#import "FLPerson.h"
 #import "UIColor+i7HexColor.h"
 #import "UIView+Frame.h"
+#import "ProfileViewController.h"
 
 
 // Different Graph endpoints
@@ -161,7 +161,15 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     }
 }
 
-
+// http://stackoverflow.com/questions/2658738/the-simplest-way-to-resize-an-uiimage
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    //UIGraphicsBeginImageContext(newSize);
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 #pragma mark - IBActions
 
@@ -169,23 +177,66 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     [self startCameraControllerFromViewController:self withDelegate:self sourceType:UIImagePickerControllerSourceTypeCamera andMediaTypes:[NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil]];
 }
 
-- (IBAction)matchPressed {
-//    UIImage *takenPhoto = self.currentImagePreviewImageView.image;
-    UIImage *takenPhoto = [[fbData lastObject] image];
-    Mat takenSrc = [self CreateIplImageFromUIImage:takenPhoto];
-    Mat takenDst;
-    cv::cvtColor(takenSrc, takenDst, CV_BGR2GRAY);
+- (IBAction)mainButtonPressed:(UIButton *)sender {
+    //    [self faceRecognition:nil];
 
+    if ([sender.titleLabel.text isEqualToString:@"Match"]) {
+        [self matchFBFaces];
+        CGFloat oldWidth = sender.width;
+        [self expandView:sender toWidth:0 onCompletion:^(void) {
+            [sender setTitle:@"View Profile" forState:UIControlStateNormal];
+            [self expandView:sender toWidth:oldWidth onCompletion:nil];
+        }];
+    }
+    
+    if ([sender.titleLabel.text isEqualToString:@"View Profile"]) {
+        [self performSegueWithIdentifier:@"viewProfile" sender:self];
+    }
+}
+
+- (void)expandView:(UIView *)view toWidth:(CGFloat)width onCompletion:(void (^)())completion {
+    [UIView transitionWithView:view duration:1 options:UIViewAnimationTransitionNone animations:^{
+        view.width = width;
+        view.centerX = view.superview.centerX;
+        
+    } completion:^(BOOL finished) {
+        if (finished) {
+            if (completion) {
+                completion();
+            }
+        }
+    }];
+}
+
+- (void)matchFBFaces {
+    UIImage *takenPhoto = self.currentImagePreviewImageView.image;
+    
     // load images
     vector<Mat> images;
     vector<int> labels;
     
+    CGSize refSize;
+    
     int i = 1;
     for (FLPerson *person in fbData) {
         
-        if (i < 20) {
-            // Create a grayscale matrix version of image
-            Mat src = [self CreateIplImageFromUIImage:person.image];
+        NSLog(@"%@", person.name);
+        if ([person.name isEqualToString:@"Scott Andrus"]) {
+            self.matchedPerson = person;
+        }
+        
+        if (i < 100) {
+            if  (i == 1) {
+                refSize = person.image.size;
+            }
+            UIImage *scaledImage = [self imageWithImage:person.image scaledToSize:refSize];
+            self.currentImagePreviewImageView.image = scaledImage;
+            NSLog(@"Before: %f, %f", person.image.size.height, person.image.size.width);
+            NSLog(@"After: %f, %f", scaledImage.size.height, scaledImage.size.width);
+            //            [self.view addSubview:imageView];
+            NSLog(@"%@", person.name);
+            
+            Mat src = [self CreateIplImageFromUIImage:scaledImage];
             Mat dst;
             cv::cvtColor(src, dst, CV_BGR2GRAY);
             
@@ -197,15 +248,31 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
         
     }
     
-    
-    
     // build the Fisherfaces model
     Fisherfaces model(images, labels);
     
+    takenPhoto = [self imageWithImage:takenPhoto scaledToSize:refSize];
+    
+    Mat takenSrc = [self CreateIplImageFromUIImage:takenPhoto];
+    Mat takenDst;
+    cv::cvtColor(takenSrc, takenDst, CV_BGR2GRAY);
+    
     // test model
     int predicted = model.predict(takenDst);
-    cout << "Guess = " << [[fbData objectAtIndex:predicted] name] << endl;
-    cout << "Actual = " << @"???" << endl;
+    
+    FLPerson *predictedPerson = [fbData objectAtIndex:predicted];
+    
+//    self.currentImagePreviewImageView.image = predictedPerson.image;
+    
+    NSLog(@"Guess = %@", predictedPerson.name);
+    
+//    if (!self.matchedPerson) {
+        self.matchedPerson = predictedPerson;
+//    }
+    
+    [UIView transitionWithView:self.currentImagePreviewImageView duration:.4 options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
+        self.currentImagePreviewImageView.image = self.matchedPerson.image;
+    } completion:nil];
 }
 
 #pragma mark - Utilities
@@ -297,7 +364,7 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     return ret;
 }
 
-- (IBAction)faceRecognition:(id)sender {
+- (void)faceRecognition:(id)sender {
     // load images
     vector<Mat> images;
     vector<int> labels;
@@ -376,7 +443,13 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
         
         // And the current image is placed in the imageview.
 //        [self updateCurrentImageView];
-
+        if ([self.matchButton.titleLabel.text isEqualToString:@"View Profile"]) {
+            CGFloat oldWidth = self.matchButton.width;
+            [self expandView:self.matchButton toWidth:0 onCompletion:^(void) {
+                [self.matchButton setTitle:@"Match" forState:UIControlStateNormal];
+                [self expandView:self.matchButton toWidth:oldWidth onCompletion:nil];
+            }];
+        }
         
         // TODO: Cache image
     }
@@ -409,4 +482,13 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     [self setMatchButton:nil];
     [super viewDidUnload];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"viewProfile"]) {
+        NSLog(@"Do stuff with %@", self.matchedPerson.name);
+        ProfileViewController *pvc = (ProfileViewController *)segue.destinationViewController;
+        pvc.person = self.matchedPerson;
+    }
+}
+
 @end

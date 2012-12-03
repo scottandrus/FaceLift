@@ -10,6 +10,8 @@
 
 #import <MobileCoreServices/MobileCoreServices.h>
 
+#import "FLPerson.h"
+
 @interface FLViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     // Contains FLPerson objects (with images).
@@ -19,6 +21,7 @@
 @property (strong, nonatomic) UIImage *currentImage;
 @property (strong, nonatomic) NSDictionary *currentImageInformation;
 @property (strong, nonatomic) UIPopoverController *popover;
+@property (strong, nonatomic) FLPerson *matchedPerson;
 
 @property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 @property (strong, nonatomic) IBOutlet UIButton *matchButton;
