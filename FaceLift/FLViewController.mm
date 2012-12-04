@@ -26,12 +26,12 @@
 // Returns a list of people who are attending for all events that
 // the signed-in user is also attending. This is the first place
 // to look for potential matches.
-NSString * const AttendingOfAttending = @"me?fields=events.type(attending).fields(attending.fields(id,name,picture.type(large)))";
+NSString * const AttendingOfAttending = @"me?fields=events.type(attending).fields(attending.fields(id,name,picture.height(240).width(240).type(square)))";
 
 // Since people may not hit attend/maybe/decline but still show up anyway,
 // the best way to 'expand' the pool of potential people is to look at who hasn't
 // responded, since they are the next most likely group to find a match.
-NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(noreply.fields(id,name,picture.type(large)))";
+NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(noreply.fields(id,name,picture.height(240).width(240).type(square)))";
 
 //@"me?fields=events.type(not_replied).fields(invited.fields(picture.type(large)))"
 
@@ -141,6 +141,10 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
                      
                      [afOp start];
                  }
+             }
+             else
+             {
+                 NSLog(@"Error while calling API");
              }
          }];
         
