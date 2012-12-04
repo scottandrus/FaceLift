@@ -1,18 +1,22 @@
 //
-//  ProfileViewController.m
+//  FLProfileViewController.m
 //  FaceLift
 //
 //  Created by Scott Andrus on 12/2/12.
 //
 //
 
-#import "ProfileViewController.h"
+#import "FLProfileViewController.h"
+#import "SAViewManipulator.h"
+#import "UIColor+i7HexColor.h"
 
-@interface ProfileViewController ()
+@interface FLProfileViewController ()
 
 @end
 
-@implementation ProfileViewController
+@implementation FLProfileViewController
+
+#pragma mark - View Lifecycle Methods
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,8 +31,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.profilePictureImageView.image = self.person.image;
-    self.nameLabel.text = self.person.name;
+    [self populateUserInfo];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +45,19 @@
     [self setNameLabel:nil];
     [super viewDidUnload];
 }
+
+#pragma mark - Instance methods
+
+- (void)customizeUserInterface {
+    [SAViewManipulator setGradientBackgroundImageForView:self.view withTopColor:[UIColor colorWithHexString:@"F0F0F0"] andBottomColor:[UIColor colorWithHexString:@"C9C9C9"]];
+}
+
+- (void)populateUserInfo {
+    self.profilePictureImageView.image = self.person.image;
+    self.nameLabel.text = self.person.name;
+}
+
+#pragma mark - IBActions
 
 - (IBAction)dismissPressed:(id)sender {
     [self.presentingViewController dismissModalViewControllerAnimated:YES];

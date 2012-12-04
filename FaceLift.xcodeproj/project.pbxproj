@@ -150,7 +150,7 @@
 		D253C9F8165589FB0052D8CC /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D253C9EF165589FA0052D8CC /* UIImageView+AFNetworking.m */; };
 		D253C9FB1655923E0052D8CC /* frontViewControllerDropShadowVertical.png in Resources */ = {isa = PBXBuildFile; fileRef = D253C9F91655923E0052D8CC /* frontViewControllerDropShadowVertical.png */; };
 		D253C9FC1655923E0052D8CC /* frontViewControllerDropShadowVertical@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D253C9FA1655923E0052D8CC /* frontViewControllerDropShadowVertical@2x.png */; };
-		D26680FB166C539F001099F8 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26680FA166C539F001099F8 /* ProfileViewController.m */; };
+		D26680FB166C539F001099F8 /* FLProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26680FA166C539F001099F8 /* FLProfileViewController.m */; };
 		D26BCC5A16430B17007030DD /* FLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D26BCC5516430B17007030DD /* FLViewController.mm */; };
 		D26BCC5B16430B17007030DD /* OBGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCC5716430B17007030DD /* OBGradientView.m */; };
 		D26BCC5C16430B17007030DD /* SAViewManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = D26BCC5916430B17007030DD /* SAViewManipulator.m */; };
@@ -165,6 +165,7 @@
 		D2BA633D1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2BA633C1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg */; };
 		D2BA63411649BAC800ADC685 /* blank_poloroid_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */; };
 		D2BA63431649BC0A00ADC685 /* alcohol_rehab_success.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63421649BC0A00ADC685 /* alcohol_rehab_success.jpg */; };
+		D2E19068166D906B00A31E30 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E19067166D906B00A31E30 /* CoreImage.framework */; };
 		D2F83F9816655E5900440CFF /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F83F9716655E5900440CFF /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
@@ -341,8 +342,8 @@
 		D253C9EF165589FA0052D8CC /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		D253C9F91655923E0052D8CC /* frontViewControllerDropShadowVertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = frontViewControllerDropShadowVertical.png; path = JSSlidingViewController/frontViewControllerDropShadowVertical.png; sourceTree = "<group>"; };
 		D253C9FA1655923E0052D8CC /* frontViewControllerDropShadowVertical@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frontViewControllerDropShadowVertical@2x.png"; path = "JSSlidingViewController/frontViewControllerDropShadowVertical@2x.png"; sourceTree = "<group>"; };
-		D26680F9166C539F001099F8 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		D26680FA166C539F001099F8 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		D26680F9166C539F001099F8 /* FLProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLProfileViewController.h; sourceTree = "<group>"; };
+		D26680FA166C539F001099F8 /* FLProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLProfileViewController.m; sourceTree = "<group>"; };
 		D26BCC5416430B17007030DD /* FLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLViewController.h; sourceTree = "<group>"; };
 		D26BCC5516430B17007030DD /* FLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FLViewController.mm; sourceTree = "<group>"; };
 		D26BCC5616430B17007030DD /* OBGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBGradientView.h; sourceTree = "<group>"; };
@@ -360,6 +361,7 @@
 		D2BA633C1649B9A000ADC685 /* 321068_223279641057506_1481430_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 321068_223279641057506_1481430_n.jpg; sourceTree = "<group>"; };
 		D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_poloroid_frame.png; sourceTree = "<group>"; };
 		D2BA63421649BC0A00ADC685 /* alcohol_rehab_success.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alcohol_rehab_success.jpg; sourceTree = "<group>"; };
+		D2E19067166D906B00A31E30 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		D2F83F9616655E5900440CFF /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		D2F83F9716655E5900440CFF /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -369,6 +371,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E19068166D906B00A31E30 /* CoreImage.framework in Frameworks */,
 				3D1525A9164C50FE00D7AA33 /* Social.framework in Frameworks */,
 				3D1525A7164C50F800D7AA33 /* AdSupport.framework in Frameworks */,
 				3D1525A5164C50F200D7AA33 /* Accounts.framework in Frameworks */,
@@ -428,6 +431,7 @@
 		9B0C156215234B7A00B14CF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2E19067166D906B00A31E30 /* CoreImage.framework */,
 				3D1525A8164C50FE00D7AA33 /* Social.framework */,
 				3D1525A6164C50F800D7AA33 /* AdSupport.framework */,
 				3D1525A4164C50F200D7AA33 /* Accounts.framework */,
@@ -743,8 +747,8 @@
 		D26BCC5316430AFC007030DD /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D26680F9166C539F001099F8 /* ProfileViewController.h */,
-				D26680FA166C539F001099F8 /* ProfileViewController.m */,
+				D26680F9166C539F001099F8 /* FLProfileViewController.h */,
+				D26680FA166C539F001099F8 /* FLProfileViewController.m */,
 				D253C9D016557A1F0052D8CC /* FLMenuViewController.xib */,
 				D253C9D216557A3C0052D8CC /* FLMenuViewController.h */,
 				D253C9D316557A3C0052D8CC /* FLMenuViewController.m */,
@@ -964,7 +968,7 @@
 				D253C9F7165589FB0052D8CC /* AFXMLRequestOperation.m in Sources */,
 				D253C9F8165589FB0052D8CC /* UIImageView+AFNetworking.m in Sources */,
 				D2F83F9816655E5900440CFF /* UIView+Frame.m in Sources */,
-				D26680FB166C539F001099F8 /* ProfileViewController.m in Sources */,
+				D26680FB166C539F001099F8 /* FLProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.h
+//  FLProfileViewController.h
 //  FaceLift
 //
 //  Created by Scott Andrus on 12/2/12.
@@ -10,7 +10,7 @@
 
 #import "FLPerson.h"
 
-@interface ProfileViewController : UIViewController
+@interface FLProfileViewController : UIViewController
 
 @property (strong, nonatomic) FLPerson *person;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePictureImageView;
