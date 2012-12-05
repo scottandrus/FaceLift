@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) FLPerson *person;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePictureImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *coverPhotoImageView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UIView *backgroundView;
 

@@ -11,6 +11,7 @@
 #import "UIColor+i7HexColor.h"
 #import "UIView+Frame.h"
 #import "SAViewManipulator.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface FLProfileViewController ()
 
@@ -49,6 +50,7 @@
     [self setBackgroundView:nil];
     [self setMatchButton:nil];
     [self setFbButton:nil];
+    [self setCoverPhotoImageView:nil];
     [super viewDidUnload];
 }
 
@@ -72,6 +74,9 @@
 
 - (void)populateUserInfo {
     self.profilePictureImageView.image = self.person.image;
+    
+    [self.coverPhotoImageView setImageWithURL:self.person.coverUrl];
+    
     self.nameLabel.text = self.person.name;
 }
 

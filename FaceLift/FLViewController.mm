@@ -328,6 +328,7 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
         });
     });
     
+    dispatch_release(processingQueue);
 
 }
 

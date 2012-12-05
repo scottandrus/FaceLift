@@ -95,7 +95,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="TS0-IH-c2H">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000013" contentMode="scaleAspectFill" id="TS0-IH-c2H">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -114,10 +114,12 @@
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backgroundView" destination="wnM-DN-DYI" id="Pge-bD-xnP"/>
+                        <outlet property="coverPhotoImageView" destination="TS0-IH-c2H" id="N9O-GB-rIY"/>
                         <outlet property="fbButton" destination="Lqu-Ug-dS2" id="4he-CG-35J"/>
                         <outlet property="matchButton" destination="MGZ-7A-zd8" id="m84-6G-f4Z"/>
                         <outlet property="nameLabel" destination="e0A-kQ-kia" id="GDP-sR-pvg"/>
@@ -224,6 +226,7 @@
                 <relationship kind="action" name="dismissPressed:"/>
                 <relationship kind="action" name="viewFBPressed:"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="coverPhotoImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="fbButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="matchButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
