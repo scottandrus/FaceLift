@@ -33,7 +33,9 @@
     
     [SAViewManipulator setGradientBackgroundImageForView:self.view withTopColor:[UIColor colorWithHexString:@"4F4F4F"] andBottomColor:[UIColor colorWithHexString:@"2B2B2B"]];
     
-    
+    // Round the view
+    [SAViewManipulator addBorderToView:self.view withWidth:.5 color:[UIColor blackColor] andRadius:10];
+    self.view.clipsToBounds = YES;
     
 }
 
