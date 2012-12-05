@@ -74,7 +74,6 @@
                                         </state>
                                         <connections>
                                             <action selector="dismissPressed:" destination="ZgV-hC-Ao7" eventType="touchUpInside" id="co6-m5-isG"/>
-                                            <action selector="matchFacePressed:" destination="ZgV-hC-Ao7" eventType="touchUpInside" id="UX1-R9-nJq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lqu-Ug-dS2">
@@ -229,6 +228,7 @@
         <class className="FLProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FLProfileViewController.h"/>
             <relationships>
+                <relationship kind="action" name="dismissPressed:"/>
                 <relationship kind="action" name="viewFBPressed:"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="coverPhotoImageView" candidateClass="UIImageView"/>
