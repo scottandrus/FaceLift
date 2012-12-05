@@ -137,7 +137,7 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
                      {
                          [p setImage:responseObject];
                          [fbData addObject:p];
-//                         NSLog(@"Added image");
+                         NSLog(@"Added image");
                      }
                      failure:^(AFHTTPRequestOperation *operation, NSError *error)
                      {
