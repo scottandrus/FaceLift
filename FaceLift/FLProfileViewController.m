@@ -63,11 +63,9 @@
     [self.presentingViewController dismissModalViewControllerAnimated:YES];
 }
 
-- (IBAction)matchFacePressed:(id)sender
+- (IBAction)friendRequestPressed:(id)sender
 {
-}
-
-- (IBAction)friendRequestPressed:(id)sender {
+    
 }
 
 - (IBAction)viewFBPressed:(id)sender
