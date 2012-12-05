@@ -63,4 +63,16 @@
     [self.presentingViewController dismissModalViewControllerAnimated:YES];
 }
 
+- (IBAction)matchFacePressed:(id)sender
+{
+}
+
+- (IBAction)friendRequestPressed:(id)sender {
+}
+
+- (IBAction)viewFBPressed:(id)sender
+{
+    NSURL *link = [NSURL URLWithString:[NSString stringWithFormat:@"http://facebook.com/%@", self.person.uid]];
+    [[UIApplication sharedApplication] openURL:link];
+}
 @end
