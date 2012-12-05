@@ -80,6 +80,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="friendRequestPressed:" destination="ZgV-hC-Ao7" eventType="touchUpInside" id="EPr-oJ-wz7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lqu-Ug-dS2">
                                 <rect key="frame" x="69" y="399" width="184" height="44"/>
@@ -92,6 +95,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="viewFBPressed:" destination="ZgV-hC-Ao7" eventType="touchUpInside" id="BMD-RG-C9X"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MGZ-7A-zd8">
                                 <rect key="frame" x="77" y="232" width="168" height="44"/>
@@ -106,6 +112,7 @@
                                 </state>
                                 <connections>
                                     <action selector="dismissPressed:" destination="ZgV-hC-Ao7" eventType="touchUpInside" id="co6-m5-isG"/>
+                                    <action selector="matchFacePressed:" destination="ZgV-hC-Ao7" eventType="touchUpInside" id="UX1-R9-nJq"/>
                                 </connections>
                             </button>
                         </subviews>
