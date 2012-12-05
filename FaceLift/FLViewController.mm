@@ -30,12 +30,12 @@
 // Returns a list of people who are attending for all events that
 // the signed-in user is also attending. This is the first place
 // to look for potential matches.
-NSString * const AttendingOfAttending = @"me?fields=events.type(attending).fields(attending.fields(id,name,picture.height(240).width(240).type(square)))";
+NSString * const AttendingOfAttending = @"me?fields=events.type(attending).fields(attending.fields(id,name,cover,picture.height(240).width(240).type(square)))";
 
 // Since people may not hit attend/maybe/decline but still show up anyway,
 // the best way to 'expand' the pool of potential people is to look at who hasn't
 // responded, since they are the next most likely group to find a match.
-NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(noreply.fields(id,name,picture.height(240).width(240).type(square)))";
+NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(noreply.fields(id,name,cover,picture.height(240).width(240).type(square)))";
 
 //@"me?fields=events.type(not_replied).fields(invited.fields(picture.type(large)))"
 
@@ -120,6 +120,7 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
                          [p setUid:[u objectForKey:@"id"]];
                          [p setName:[u objectForKey:@"name"]];
                          [p setPictureUrl:[NSURL URLWithString:[[[u objectForKey:@"picture"] objectForKey:@"data"] objectForKey:@"url"]]];
+                         [p setCoverUrl:[NSURL URLWithString:[[u objectForKey:@"cover"] objectForKey:@"source"]]];
                          [allPeople addObject:p];
                      }
                  }

@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSURL *pictureUrl;
 @property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) NSURL *coverUrl;
 
 @end
