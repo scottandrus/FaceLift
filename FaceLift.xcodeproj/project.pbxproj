@@ -166,6 +166,8 @@
 		D2BA63411649BAC800ADC685 /* blank_poloroid_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */; };
 		D2BA63431649BC0A00ADC685 /* alcohol_rehab_success.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2BA63421649BC0A00ADC685 /* alcohol_rehab_success.jpg */; };
 		D2E19068166D906B00A31E30 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E19067166D906B00A31E30 /* CoreImage.framework */; };
+		D2E19074166EF2A900A31E30 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D2E19071166EF2A900A31E30 /* SVProgressHUD.bundle */; };
+		D2E19075166EF2A900A31E30 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E19073166EF2A900A31E30 /* SVProgressHUD.m */; };
 		D2F83F9816655E5900440CFF /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F83F9716655E5900440CFF /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
@@ -362,6 +364,9 @@
 		D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_poloroid_frame.png; sourceTree = "<group>"; };
 		D2BA63421649BC0A00ADC685 /* alcohol_rehab_success.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alcohol_rehab_success.jpg; sourceTree = "<group>"; };
 		D2E19067166D906B00A31E30 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		D2E19071166EF2A900A31E30 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		D2E19072166EF2A900A31E30 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		D2E19073166EF2A900A31E30 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		D2F83F9616655E5900440CFF /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		D2F83F9716655E5900440CFF /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -763,6 +768,7 @@
 		D26BCC6E16430D66007030DD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D2E19077166EF2B300A31E30 /* SVProgressHUD */,
 				D253C9C4165579D90052D8CC /* JSSlidingViewController */,
 				D253C9DC165589FA0052D8CC /* AFNetworking */,
 				D253C9D9165583FD0052D8CC /* UIColor+i7HexColor.h */,
@@ -796,6 +802,16 @@
 				D2BA63401649BAC800ADC685 /* blank_poloroid_frame.png */,
 			);
 			name = People;
+			sourceTree = "<group>";
+		};
+		D2E19077166EF2B300A31E30 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D2E19071166EF2A900A31E30 /* SVProgressHUD.bundle */,
+				D2E19072166EF2A900A31E30 /* SVProgressHUD.h */,
+				D2E19073166EF2A900A31E30 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -932,6 +948,7 @@
 				D253C9D116557A1F0052D8CC /* FLMenuViewController.xib in Resources */,
 				D253C9FB1655923E0052D8CC /* frontViewControllerDropShadowVertical.png in Resources */,
 				D253C9FC1655923E0052D8CC /* frontViewControllerDropShadowVertical@2x.png in Resources */,
+				D2E19074166EF2A900A31E30 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,6 +986,7 @@
 				D253C9F8165589FB0052D8CC /* UIImageView+AFNetworking.m in Sources */,
 				D2F83F9816655E5900440CFF /* UIView+Frame.m in Sources */,
 				D26680FB166C539F001099F8 /* FLProfileViewController.m in Sources */,
+				D2E19075166EF2A900A31E30 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,6 +22,7 @@
 #import "UIColor+i7HexColor.h"
 #import "UIView+Frame.h"
 #import "FLProfileViewController.h"
+#import "SVProgressHUD.h"
 
 
 // Different Graph endpoints
@@ -188,12 +189,8 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     //    [self faceRecognition:nil];
 
     if ([sender.titleLabel.text isEqualToString:@"Match"]) {
+        [SVProgressHUD showWithStatus:@"Matching..."];
         [self matchFBFaces];
-        CGFloat oldWidth = sender.width;
-        [self expandView:sender toWidth:0 onCompletion:^(void) {
-            [sender setTitle:@"View Profile" forState:UIControlStateNormal];
-            [self expandView:sender toWidth:oldWidth onCompletion:nil];
-        }];
     }
     
     if ([sender.titleLabel.text isEqualToString:@"View Profile"]) {
@@ -221,17 +218,16 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     CIImage *fDetectImage = [[CIImage alloc] initWithImage:image];
     
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace
-                                              context:nil options:[NSDictionary dictionaryWithObject:CIDetectorAccuracyHigh forKey:CIDetectorAccuracy]];
+                                              context:nil options:[NSDictionary dictionaryWithObject:CIDetectorAccuracyLow forKey:CIDetectorAccuracy]];
     
     // create an array containing all the detected faces from the detector
-    NSArray *features = [detector featuresInImage:fDetectImage];
+    NSDictionary* imageOptions = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:6] forKey:CIDetectorImageOrientation];
+    NSArray *features = [detector featuresInImage:fDetectImage options:imageOptions];
     
     for (CIFaceFeature *faceFeature in features) {
-        if (![faceFeature hasLeftEyePosition] && ![faceFeature hasRightEyePosition] && ![faceFeature hasMouthPosition]) {
-            CGRect bounds = faceFeature.bounds;
-            fDetectImage = [fDetectImage imageByCroppingToRect:bounds];
-            
-        }
+        CGRect bounds = faceFeature.bounds;
+        NSLog(@"bounds: %f %f", bounds.origin.x, bounds.origin.y);
+        fDetectImage = [fDetectImage imageByCroppingToRect:bounds];
     }
     
     UIImage *myImage = [[UIImage alloc] initWithCIImage:fDetectImage];
@@ -242,81 +238,96 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
 - (void)matchFBFaces {
  
     // Crop a face from the image
-    UIImage *takenPhoto = [self cropFaceFromImage:self.currentImagePreviewImageView.image];
-    
-    self.currentImagePreviewImageView.image = takenPhoto;
-   
-    // Create vectors for the fisherfaces model
-    vector<Mat> images;
-    vector<int> labels;
+//    UIImage *takenPhoto = [self cropFaceFromImage:self.currentImagePreviewImageView.image];
+    UIImage *takenPhoto = self.currentImagePreviewImageView.image;
     
     // Allocate a reference size
     CGSize refSize = CGSizeMake(240, 240);
-
-    // For each person in our Facebook data
-    int i = 1;
-    for (FLPerson *person in fbData) {
-        
-        /* DEBUG
-        
-        if ([person.name isEqualToString:@"Scott Andrus"]) {
-            self.matchedPerson = person;
-        }
-        
-         DEBUG */ 
-        
-        // Take only the first 100 people
-        if (i < 50) {
-            
-            // Crop the face and scale the image of person
-            UIImage *scaledImage = [self imageWithImage:[self cropFaceFromImage:person.image] scaledToSize:refSize];
-           
-            // Log the person's name
-            NSLog(@"%@", person.name);
-            
-            
-            // Create a cv matrix from the picture
-            Mat src = [self CreateIplImageFromUIImage:scaledImage];
-            Mat dst;
-            cv::cvtColor(src, dst, CV_BGR2GRAY);
-            
-            // Add it to the vector
-            images.push_back(dst);
-            labels.push_back(i);
-            
-            // Increment loop counter
-            i++;
-        }
-        
-    }
-    
-    // build the Fisherfaces model
-    Fisherfaces model(images, labels);
     
     // Scale the taken photo
     takenPhoto = [self imageWithImage:takenPhoto scaledToSize:refSize];
     
-    // Create a cv matrix for it
-    Mat takenSrc = [self CreateIplImageFromUIImage:takenPhoto];
-    Mat takenDst;
-    cv::cvtColor(takenSrc, takenDst, CV_BGR2GRAY);
+    dispatch_queue_t processingQueue = dispatch_queue_create("processing", NULL);
+    dispatch_async(processingQueue, ^{
+        
+        // Create vectors for the fisherfaces model
+        vector<Mat> images;
+        vector<int> labels;
+
+        
+        // For each person in our Facebook data
+        int i = 1;
+        for (FLPerson *person in fbData) {
+            
+            /* DEBUG */
+            
+            if ([person.name isEqualToString:@"Scott Andrus"]) {
+                self.matchedPerson = person;
+            }
+            
+            /* DEBUG */
+            
+            // Take only the first 100 people
+            if (i < 50) {
+                
+                // Crop the face and scale the image of person
+                UIImage *scaledImage = [self imageWithImage:person.image scaledToSize:refSize];
+                
+                // Log the person's name
+                NSLog(@"%@", person.name);
+                
+                
+                // Create a cv matrix from the picture
+                Mat src = [self CreateIplImageFromUIImage:scaledImage];
+                Mat dst;
+                cv::cvtColor(src, dst, CV_BGR2GRAY);
+                
+                // Add it to the vector
+                images.push_back(dst);
+                labels.push_back(i);
+                
+                // Increment loop counter
+                i++;
+            }
+            
+        }
+        
+        // build the Fisherfaces model
+        Fisherfaces model(images, labels);
+        
+        
+        // Create a cv matrix for it
+        Mat takenSrc = [self CreateIplImageFromUIImage:takenPhoto];
+        Mat takenDst;
+        cv::cvtColor(takenSrc, takenDst, CV_BGR2GRAY);
+        
+        // test model
+        int predicted = model.predict(takenDst);
+        
+        // Index the prediction
+        FLPerson *predictedPerson = [fbData objectAtIndex:predicted];
+        
+        // Log the matched person
+        NSLog(@"Guess = %@", predictedPerson.name);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [SVProgressHUD showSuccessWithStatus:@"Match found!"];
+            
+            // Done matching, show picture of matched person
+            [UIView transitionWithView:self.currentImagePreviewImageView duration:.4 options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
+                self.currentImagePreviewImageView.image = self.matchedPerson.image;
+            } completion:nil];
+            
+            CGFloat oldWidth = self.matchButton.width;
+            [self expandView:self.matchButton toWidth:0 onCompletion:^(void) {
+                [self.matchButton setTitle:@"View Profile" forState:UIControlStateNormal];
+                [self expandView:self.matchButton toWidth:oldWidth onCompletion:nil];
+            }];
+        });
+    });
     
-    // test model
-    int predicted = model.predict(takenDst);
-    
-    // Index the prediction
-    FLPerson *predictedPerson = [fbData objectAtIndex:predicted];
-    
-    // Log the matched person
-    NSLog(@"Guess = %@", predictedPerson.name);
-    
-    // Grab the matched person
-    self.matchedPerson = predictedPerson;
-    
-    // Done matching, show picture of matched person
-    [UIView transitionWithView:self.currentImagePreviewImageView duration:.4 options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
-        self.currentImagePreviewImageView.image = self.matchedPerson.image;
-    } completion:nil];
+
 }
 
 #pragma mark - Utilities
@@ -328,6 +339,15 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     
     // Sets gradient background for main view
     [SAViewManipulator setGradientBackgroundImageForView:self.currentImagePreviewImageView.superview withTopColor:[UIColor colorWithHexString:@"858585"] andBottomColor:[UIColor colorWithHexString:@"4F4F4F"]];
+    
+    // Round the view
+    [SAViewManipulator addBorderToView:self.view withWidth:.5 color:[UIColor blackColor] andRadius:10];
+    self.view.clipsToBounds = YES;
+    
+    // Customize button
+    [SAViewManipulator setGradientBackgroundImageForView:self.matchButton withTopColor:[UIColor colorWithHexString:@"FFA81C"] andBottomColor:[UIColor colorWithHexString:@"FF7B1C"]];
+    [SAViewManipulator addBorderToView:self.matchButton withWidth:.5 color:[UIColor blackColor] andRadius:10];
+    self.matchButton.clipsToBounds = YES;
 }
 
 - (void)showNoCameraAlert {
@@ -486,7 +506,6 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
         self.currentImageInformation = info;
         
         // And the current image is placed in the imageview.
-//        [self updateCurrentImageView];
         if ([self.matchButton.titleLabel.text isEqualToString:@"View Profile"]) {
             CGFloat oldWidth = self.matchButton.width;
             [self expandView:self.matchButton toWidth:0 onCompletion:^(void) {
