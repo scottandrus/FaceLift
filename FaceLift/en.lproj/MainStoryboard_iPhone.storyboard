@@ -14,30 +14,35 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FaceLift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4yi-bk-2XP">
-                                <rect key="frame" x="47" y="118" width="226" height="69"/>
+                                <rect key="frame" x="20" y="118" width="280" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="44g-n0-yaT">
-                                <rect key="frame" x="50" y="352" width="221" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="s0b-rr-MrF">
+                                <rect key="frame" x="17" y="332" width="286" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
                                 <state key="normal" title="Log in with Facebook">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="facebookLogin:" destination="AZk-TL-QeM" eventType="touchUpInside" id="jTc-iN-Ril"/>
+                                    <action selector="facebookLogin:" destination="AZk-TL-QeM" eventType="touchUpInside" id="9Nf-Lk-vWZ"/>
+                                    <action selector="viewFBPressed:" destination="ZgV-hC-Ao7" eventType="touchUpInside" id="wnZ-5U-UVc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="s0b-rr-MrF" id="RFf-Wm-NZ0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDl-of-uTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,12 +223,12 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FLLoginViewController.h"/>
             <relationships>
                 <relationship kind="action" name="facebookLogin:"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="FLProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FLProfileViewController.h"/>
             <relationships>
-                <relationship kind="action" name="dismissPressed:"/>
                 <relationship kind="action" name="viewFBPressed:"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="coverPhotoImageView" candidateClass="UIImageView"/>

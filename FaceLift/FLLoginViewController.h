@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FLLoginViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 - (IBAction)facebookLogin:(id)sender;
 - (void)loginFailed;
