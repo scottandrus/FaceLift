@@ -202,31 +202,6 @@
         <image name="Camera@2x.png" width="220" height="220"/>
         <image name="blank_poloroid_frame.png" width="3039" height="3335"/>
     </resources>
-    <classes>
-        <class className="FLLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FLLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="facebookLogin:"/>
-            </relationships>
-        </class>
-        <class className="FLProfileViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FLProfileViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="profilePictureImageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="FLViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FLViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="faceRecognition:"/>
-                <relationship kind="action" name="mainButtonPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cameraButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="currentImagePreviewImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="matchButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
