@@ -228,7 +228,6 @@
         <class className="FLProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FLProfileViewController.h"/>
             <relationships>
-                <relationship kind="action" name="dismissPressed:"/>
                 <relationship kind="action" name="viewFBPressed:"/>
                 <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="coverPhotoImageView" candidateClass="UIImageView"/>

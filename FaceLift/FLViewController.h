@@ -27,6 +27,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *matchButton;
 @property (strong, nonatomic) IBOutlet UIImageView *currentImagePreviewImageView;
 
+@property (assign, nonatomic) BOOL demoMode;
+
 
 - (IBAction)faceRecognition:(id)sender;
 

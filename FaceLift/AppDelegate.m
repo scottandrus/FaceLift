@@ -23,6 +23,7 @@ NSString *const SessionStateChangedNotification = @"self:SessionStateChangedNoti
     
     self.frontVC = (FLViewController *)self.window.rootViewController;
     self.backVC = [[FLMenuViewController alloc] initWithNibName:@"FLMenuViewController" bundle:nil];
+    self.backVC.appDelegate = self;
     
     self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:self.frontVC backViewController:self.backVC];
     

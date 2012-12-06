@@ -58,6 +58,8 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
     
     [self customizeInterface];
     
+    self.demoMode = NO;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -307,6 +309,10 @@ NSString * const NoReplyOfAttending = @"me?fields=events.type(attending).fields(
         
         // Index the prediction
         FLPerson *predictedPerson = [fbData objectAtIndex:predicted];
+        
+        if (!self.demoMode) {
+            self.matchedPerson = predictedPerson;
+        }
         
         // Log the matched person
         NSLog(@"Guess = %@", predictedPerson.name);
